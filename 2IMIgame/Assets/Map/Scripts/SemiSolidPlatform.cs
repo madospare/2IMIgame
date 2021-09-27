@@ -19,7 +19,7 @@ public class SemiSolidPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // Player can go down a platform if down arrow is pressed
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             waitTime = 0.5f;
