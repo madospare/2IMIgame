@@ -24,4 +24,14 @@ public class CheckPoint : MonoBehaviour
 
     }
 
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+
+        if (collisionInfo.collider.tag == ("Default") | collisionInfo.collider.tag == ("Orb"))
+        {
+            gm.lastCheckPointPos = transform.position;
+        }
+
+    }
+
 }

@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 3753431505
+    locked: 0
+  - name: healthUI
+    uniqueID: 1078819755
+    locked: 0
