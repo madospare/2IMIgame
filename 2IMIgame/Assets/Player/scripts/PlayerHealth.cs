@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public Sprite life;
     public Sprite emptyLife;
 
-    public GameMaster gm;
+    public GameObject player;
     private CheckPoint checkPoint;
 
     void Update()
@@ -45,12 +45,17 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collisionInfo)
+    void OnCollisionEnter2D(Collision2D collisionInfo)
     {
 
-        if (health < 3)
+        if (collisionInfo.collider.tag == ("Enemy"))
         {
-
+            health -= 1;
+        } 
+        
+        if (health == 0)
+        {
+            Destroy(player);
         }
        
     }

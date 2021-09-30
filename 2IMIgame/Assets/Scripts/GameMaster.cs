@@ -21,9 +21,4 @@ public class GameMaster : MonoBehaviour
 
     }
 
-    void GameOver()
-    {
-        Debug.Log("DEAD");
-    }
-
 }

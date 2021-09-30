@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 324164153}
   m_Layer: 6
   m_Name: enemySpike
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 394536629}
   m_Layer: 7
   m_Name: enemyOrbGFX
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 540762875}
   m_Layer: 0
   m_Name: enemyCharacter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1322,11 +1322,11 @@ GameObject:
   - component: {fileID: 1025370386}
   m_Layer: 7
   m_Name: enemyOrb
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1025370383
 Transform:
   m_ObjectHideFlags: 0
@@ -1726,8 +1726,7 @@ MonoBehaviour:
   - {fileID: 1529484992}
   life: {fileID: 21300000, guid: 1fbf8f10ea04a1e4fb4e788bee2695d6, type: 3}
   emptyLife: {fileID: 21300000, guid: 265b15ef0bbd3d042a99e27d498b754a, type: 3}
-  gm: {fileID: 1473842137}
-  checkPoint: {fileID: 1691956687}
+  player: {fileID: 1124862321}
 --- !u!1 &1243782046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,7 +2501,7 @@ GameObject:
   - component: {fileID: 1973809314}
   m_Layer: 0
   m_Name: enemyTurret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
