@@ -6,8 +6,8 @@ namespace GameServer
 {
     class ServerSend
     {
-
-        private static void Welcome(int _toClient, Packet _packet)
+        
+        private static void SendTCPData(int _toClient, Packet _packet)
         {
 
             _packet.WriteLength();
