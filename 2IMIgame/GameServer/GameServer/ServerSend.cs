@@ -15,6 +15,14 @@ namespace GameServer
 
         }
 
+        private static void SendUDPData(int _toClient, Packet _packet)
+        {
+
+            _packet.WriteLength();
+            Server.clients[_toClient].udp.SendData(_packet);
+
+        }
+
         private static void SendTCPDataToAll(Packet _packet)
         {
 
@@ -42,6 +50,7 @@ namespace GameServer
 
         }
 
+        #region Packets
         public static void Welcome(int _toClient, string _msg)
         {
 
@@ -56,6 +65,7 @@ namespace GameServer
             }
 
         }
+        #endregion
 
     }
 }
