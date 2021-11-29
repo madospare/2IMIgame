@@ -23,5 +23,15 @@ namespace GameServer
 
         }
 
+        public static void UDPTestRecieved(int _fromClient, Packet _packet)
+        {
+
+            string _msg = _packet.ReadString();
+
+            Console.WriteLine($"Recieved packet via UDP. Contains message {_msg}");
+
+        }
+
     }
+
 }

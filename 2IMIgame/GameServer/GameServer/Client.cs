@@ -169,6 +169,7 @@ namespace GameServer
             {
 
                 endPoint = _endPoint;
+                ServerSend.UDPTest(id);
 
             }
 

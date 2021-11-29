@@ -108,7 +108,7 @@ namespace GameServer
             {
                 if (_clientEndPoint != null)
                 {
-                    udpListener.BeginSend(_packet.ToArray(), _packet.Length(), _clientEndPoint);
+                    udpListener.BeginSend(_packet.ToArray(), _packet.Length(), _clientEndPoint, null, null);
                 }
             } catch (Exception _ex)
             {
@@ -127,7 +127,8 @@ namespace GameServer
 
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
-                { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived }
+                { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
+                { (int)ClientPackets.udpTestRecieved, ServerHandle.UDPTestRecieved }
             };
 
             Console.WriteLine("Initialized packets.");
