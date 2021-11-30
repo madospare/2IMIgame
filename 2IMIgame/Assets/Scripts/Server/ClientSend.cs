@@ -32,18 +32,6 @@ public class ClientSend : MonoBehaviour
             SendTCPData(_packet);
         }
     }
-
-    public static void UDPTestRecieved()
-    {
-        using (Packet _packet = new Packet((int)ClientPackets.udpTestRecieved))
-        {
-
-            _packet.Write("Recieved a UDP packet.");
-
-            SendUDPData(_packet);
-
-        }
-    }
     #endregion
 
 }
