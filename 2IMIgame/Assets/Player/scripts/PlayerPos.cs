@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class PlayerPos : MonoBehaviour
 {
@@ -10,18 +11,22 @@ public class PlayerPos : MonoBehaviour
 
     public GameObject player;
 
+    PhotonView view;
+
     void Start()
     {
 
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
 
+        view = GetComponent<PhotonView>();
+
     }
 
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.A) && view.IsMine)
         {
             player.transform.position = gm.lastCheckPointPos;
         }
@@ -31,12 +36,12 @@ public class PlayerPos : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
 
-        if (collisionInfo.collider.tag == ("CheckPoint"))
+        if (collisionInfo.collider.tag == ("CheckPoint") && view.IsMine)
         {
             gm.lastCheckPointPos = transform.position;
         }
 
-        if (collisionInfo.collider.tag == ("Enemy"))
+        if (collisionInfo.collider.tag == ("Enemy") && view.IsMine)
         {
             player.transform.position = gm.lastCheckPointPos; ;
         }
