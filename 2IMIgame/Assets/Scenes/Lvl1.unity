@@ -449,6 +449,7 @@ BoxCollider2D:
   m_Size: {x: 0.01, y: 0.24}
   m_EdgeRadius: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &249364827
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +527,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249364827}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
 --- !u!1 &323810541
@@ -919,6 +922,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 5
 =======
   m_RootOrder: 4
@@ -932,6 +936,9 @@ Transform:
 =======
   m_RootOrder: 6
 >>>>>>> parent of 09a2dbd (deleted server)
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
   m_RootOrder: 4
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
@@ -1238,6 +1245,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 8
 =======
   m_RootOrder: 7
@@ -1456,6 +1464,11 @@ MonoBehaviour:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &540762875
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
+=======
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540762875
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1467,6 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 218e9cbb49dc9414e978d8f14fadbe57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1496,11 +1510,16 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 >>>>>>> parent of 09a2dbd (deleted server)
 =======
+=======
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
   speed: 4
   distance: 0.3
   groundDetection: {fileID: 1509714445}
   sideRightDetection: {fileID: 5667247}
   sideLeftDetection: {fileID: 657848664}
+<<<<<<< HEAD
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
+=======
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
 --- !u!1 &657848663
 GameObject:
@@ -1574,6 +1593,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 7
 =======
   m_RootOrder: 6
@@ -1619,6 +1639,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 413405930}
   m_RootOrder: 0
+=======
+  m_RootOrder: 6
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
   m_RootOrder: 6
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
@@ -1747,6 +1770,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 9
 =======
   m_RootOrder: 8
@@ -1760,6 +1784,9 @@ Transform:
 =======
   m_RootOrder: 10
 >>>>>>> parent of 09a2dbd (deleted server)
+=======
+  m_RootOrder: 8
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
   m_RootOrder: 8
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
@@ -2252,6 +2279,7 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 4
 =======
   m_RootOrder: 3
@@ -2265,6 +2293,9 @@ RectTransform:
 =======
   m_RootOrder: 5
 >>>>>>> parent of 09a2dbd (deleted server)
+=======
+  m_RootOrder: 3
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
   m_RootOrder: 3
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
@@ -2687,6 +2718,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 13
 =======
   m_RootOrder: 11
@@ -2700,6 +2732,9 @@ Transform:
 =======
   m_RootOrder: 14
 >>>>>>> parent of 09a2dbd (deleted server)
+=======
+  m_RootOrder: 11
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
   m_RootOrder: 11
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
@@ -2928,6 +2963,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 11
 =======
   m_RootOrder: 10
@@ -2941,6 +2977,9 @@ Transform:
 =======
   m_RootOrder: 12
 >>>>>>> parent of 09a2dbd (deleted server)
+=======
+  m_RootOrder: 10
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
   m_RootOrder: 10
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
@@ -3045,6 +3084,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 10
 =======
   m_RootOrder: 9
@@ -3058,6 +3098,9 @@ Transform:
 =======
   m_RootOrder: 11
 >>>>>>> parent of 09a2dbd (deleted server)
+=======
+  m_RootOrder: 9
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
   m_RootOrder: 9
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
@@ -3459,6 +3502,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &2088893547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,5 +3724,7 @@ PrefabInstance:
     - {fileID: 4026433952700008459, guid: 5e36e7bc946c45a41b63490a93e6d666, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e36e7bc946c45a41b63490a93e6d666, type: 3}
 >>>>>>> parent of 09a2dbd (deleted server)
+=======
+>>>>>>> parent of 0b40c24 (Fixed checkpoints)
 =======
 >>>>>>> parent of 0b40c24 (Fixed checkpoints)
