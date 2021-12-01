@@ -31,9 +31,14 @@ public class PlayerPos : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
 
-        if (collisionInfo.collider.tag == ("Enemy"))
+        if (collisionInfo.collider.tag == ("CheckPoint"))
         {
             gm.lastCheckPointPos = transform.position;
+        }
+
+        if (collisionInfo.collider.tag == ("Enemy"))
+        {
+            player.transform.position = gm.lastCheckPointPos; ;
         }
 
     }
