@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3793539968050069875}
   - component: {fileID: 3793539968050069884}
   - component: {fileID: 3793539968050069885}
+  - component: {fileID: 8750801388220469093}
   - component: {fileID: 3793539968050069886}
   - component: {fileID: -1863118868087428047}
   m_Layer: 3
@@ -195,12 +196,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 3793539968050069874}
   runSpeed: 40
-  rb: {fileID: 3793539968050069872}
   distance: 5
   Ladder:
     serializedVersion: 2
     m_Bits: 512
   isClimbing: 0
+  climbSpeed: 100
 --- !u!114 &3793539968050069884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,15 +227,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4fb8f8970f5d042882d02cf3fceb8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   numOfLives: 3
-  lives:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  life: {fileID: 21300000, guid: 1fbf8f10ea04a1e4fb4e788bee2695d6, type: 3}
-  emptyLife: {fileID: 21300000, guid: 265b15ef0bbd3d042a99e27d498b754a, type: 3}
   player: {fileID: 3793539968050069877}
+--- !u!114 &8750801388220469093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793539968050069877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6064d1627c75a644797e81c1d72f2269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3793539968050069886
 MonoBehaviour:
   m_ObjectHideFlags: 0

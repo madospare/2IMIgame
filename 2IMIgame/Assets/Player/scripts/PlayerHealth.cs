@@ -6,15 +6,17 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int health;
+    public static int health;
     public int numOfLives;
 
-    public Image[] lives;
-    public Sprite life;
-    public Sprite emptyLife;
-
     public GameObject player;
+    private Text LivesText;
     private CheckPoint checkPoint;
+
+    void Start()
+    {
+        health = numOfLives;
+    }
 
     void Update()
     {
@@ -22,25 +24,6 @@ public class PlayerHealth : MonoBehaviour
         if(health > numOfLives)
         {
             health = numOfLives;
-        }
-
-        for (int i = 0; i < lives.Length; i++)
-        {
-            if(i < health)
-            {
-                lives[i].sprite = life;
-            } else
-            {
-                lives[i].sprite = emptyLife;
-            }
-
-            if(i < numOfLives)
-            {
-                lives[i].enabled = true;
-            } else
-            {
-                lives[i].enabled = false;
-            }
         }
 
     }
@@ -56,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
         if (health == 0)
         {
             Destroy(player);
+            LivesText.text = "x0";
         }
        
     }

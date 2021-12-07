@@ -13,12 +13,13 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
 
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     public float distance;      // For climbing ladders
     public LayerMask Ladder;
     public bool isClimbing;
     float verticalMove = 0f;
+    public float climbSpeed = 80f;
 
     PhotonView view;
 
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         view = GetComponent<PhotonView>();
+        rb = GetComponent<Rigidbody2D>();
 
     }
 
@@ -65,19 +67,20 @@ public class PlayerMovement : MonoBehaviour
                 }
             } else
             {
-                isClimbing = false;
+                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    isClimbing = false;
+                }
             }
 
-            if(isClimbing == true && hitInfo.collider != null)
+            if (isClimbing == true && hitInfo.collider != null)
             {
-                verticalMove = Input.GetAxisRaw("Vertical");
-                rb.velocity = new Vector2(rb.position.x, verticalMove * runSpeed);
+                verticalMove = Input.GetAxisRaw("Vertical") * climbSpeed;
+                rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
                 rb.gravityScale = 0;
-                runSpeed = 10f;
             } else
             {
                 rb.gravityScale = 3;
-                runSpeed = 40f;
             }
         }
 
