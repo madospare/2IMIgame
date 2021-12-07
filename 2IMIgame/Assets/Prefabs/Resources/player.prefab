@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 3793539968050069884}
   - component: {fileID: 3793539968050069885}
   - component: {fileID: 8750801388220469093}
+  - component: {fileID: 5856289706958971444}
   - component: {fileID: 3793539968050069886}
   - component: {fileID: -1863118868087428047}
   m_Layer: 3
@@ -241,6 +242,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6064d1627c75a644797e81c1d72f2269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5856289706958971444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793539968050069877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34749eeebc33a13419335c85216d8270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilities: 5
+  magnet: 0
+  powerJump: 0
+  shield: 0
+  pushSpell: 0
+  blindness: 0
+  heal: 0
 --- !u!114 &3793539968050069886
 MonoBehaviour:
   m_ObjectHideFlags: 0
