@@ -8,6 +8,8 @@ public class Coin : MonoBehaviour
     private GameObject player;
     public float magnetSpeed = 10f;
 
+    public static bool withinRadius = false;
+
     void Start()
     {
 
@@ -18,22 +20,25 @@ public class Coin : MonoBehaviour
     void Update()
     {
 
-        if (AB.magnetON == true)
+        if (AB.magnetON == true && withinRadius == true)
         {
-            
-                Vector2 dir = player.transform.position - transform.position;
-                transform.Translate(dir.normalized * magnetSpeed * Time.deltaTime, Space.World);
-            
+            Vector2 dir = player.transform.position - transform.position;
+            transform.Translate(dir.normalized * magnetSpeed * Time.deltaTime, Space.World);
         }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.tag == ("Player"))
         {
             Destroy(gameObject);
+        }
+
+        if (collision.tag == ("MagnetRadius") && AB.magnetON == true)
+        {
+            withinRadius = true;
         }
 
     }
