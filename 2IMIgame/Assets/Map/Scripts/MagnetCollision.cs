@@ -11,7 +11,6 @@ public class MagnetCollision : MonoBehaviour
         if (collision.tag == ("Player"))
         {
             Abilities.magnet = true;
-            Debug.Log(Abilities.magnet);
             Destroy(gameObject);
             
         }

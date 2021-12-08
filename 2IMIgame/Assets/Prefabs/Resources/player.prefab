@@ -254,13 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34749eeebc33a13419335c85216d8270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilities: 5
-  magnet: 0
-  powerJump: 0
-  shield: 0
-  pushSpell: 0
-  blindness: 0
-  heal: 0
+  player: {fileID: 3793539968050069877}
 --- !u!114 &3793539968050069886
 MonoBehaviour:
   m_ObjectHideFlags: 0

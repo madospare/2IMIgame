@@ -5,9 +5,7 @@ using UnityEngine;
 public class Abilities : MonoBehaviour
 {
 
-    public GameObject GameMaster;
-
-    public bool hasAbility = false;
+    public GameObject player;
 
     public static bool magnet = false;
     public static bool powerJump = false;
@@ -20,10 +18,9 @@ public class Abilities : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.X) && hasAbility == true)
+        if (Input.GetKey(KeyCode.X))
         {
             UseAbility();
-            hasAbility = false;
         }
 
     }
@@ -33,33 +30,63 @@ public class Abilities : MonoBehaviour
 
         if (magnet == true)
         {
-            GameMaster.GetComponent<AB>().Ab_AttractCoins();
-            hasAbility = true;
+            player.GetComponent<AB>().Ab_AttractCoins();
+
+            powerJump = false;
+            shield = false;
+            pushSpell = false;
+            blindness = false;
+            heal = false;
         }
 
         if (powerJump == true)
         {
-            hasAbility = true;
+
+            magnet = false;
+            shield = false;
+            pushSpell = false;
+            blindness = false;
+            heal = false;
         }
 
         if (shield == true)
         {
-            hasAbility = true;
+
+            magnet = false;
+            powerJump = false;
+            pushSpell = false;
+            blindness = false;
+            heal = false;
         }
 
         if (pushSpell == true)
         {
-            hasAbility = true;
+
+            magnet = false;
+            powerJump = false;
+            shield = false;
+            blindness = false;
+            heal = false;
         }
 
         if (blindness == true)
         {
-            hasAbility = true;
+
+            magnet = false;
+            powerJump = false;
+            shield = false;
+            pushSpell = false;
+            heal = false;
         }
 
         if (heal == true)
         {
-            hasAbility = true;
+
+            magnet = false;
+            powerJump = false;
+            shield = false;
+            pushSpell = false;
+            blindness = false;
         }
 
     }

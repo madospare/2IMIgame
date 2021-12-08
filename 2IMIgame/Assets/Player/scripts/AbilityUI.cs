@@ -28,6 +28,9 @@ public class AbilityUI : MonoBehaviour
         if (Abilities.magnet == true)
         {
             rend.sprite = magnet;
+        } else
+        {
+            rend.sprite = null;
         }
 
         if (Abilities.powerJump == true)

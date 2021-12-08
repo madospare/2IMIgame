@@ -7,6 +7,7 @@ TagManager:
   - GM
   - Enemy
   - Coin
+  - MagnetRadius
   layers:
   - Default
   - TransparentFX
