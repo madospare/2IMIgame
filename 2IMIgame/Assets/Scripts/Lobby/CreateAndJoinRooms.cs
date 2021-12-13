@@ -10,6 +10,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public InputField createInput;
     public InputField JoinInput;
 
+    // Room will be created with text written by player in the input field
     public void CreateRoom()
     {
 
@@ -17,6 +18,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     }
 
+    // Room will be joined with text written by player in the input field
     public void JoinRoom()
     {
 
@@ -24,6 +26,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     }
 
+    // When entering a room, the lvl 1 scene will be loaded
     public override void OnJoinedRoom()
     {
 

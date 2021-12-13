@@ -20,6 +20,7 @@ public class Coin : MonoBehaviour
     void Update()
     {
 
+        // If player has activated the magnet, and the coins are within the magnet's radius, the coins will be drawn to the player
         if (AB.magnetON == true && withinRadius == true)
         {
             Vector2 dir = player.transform.position - transform.position;
@@ -31,11 +32,13 @@ public class Coin : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
 
+        // If the player touches a coin, it disappears
         if (collision.tag == ("Player"))
         {
             Destroy(gameObject);
         }
 
+        // If player has activated the magnet and the coin touches the trigger collider of the magnet radius, within radius will be set to true
         if (collision.tag == ("MagnetRadius") && AB.magnetON == true)
         {
             withinRadius = true;

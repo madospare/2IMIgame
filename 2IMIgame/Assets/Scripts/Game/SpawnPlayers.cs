@@ -13,6 +13,7 @@ public class SpawnPlayers : MonoBehaviour
     private void Start()
     {
 
+        // Players are spawned into the game when it starts
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         PhotonNetwork.Instantiate(playerprefab.name, gm.lastCheckPointPos, Quaternion.identity);
 

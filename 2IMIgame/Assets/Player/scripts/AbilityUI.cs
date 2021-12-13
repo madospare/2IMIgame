@@ -18,10 +18,11 @@ public class AbilityUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // On start, no abilities are aquired, and thus no ability sprite is shown in the UI
         rend.sprite = null;
     }
 
-
+    // Depending on which ability the player has aquired, an ability sprite will appear in the UI
     void Update()
     {
 

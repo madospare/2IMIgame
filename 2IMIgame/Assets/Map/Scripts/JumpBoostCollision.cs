@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagnetCollision : MonoBehaviour
+public class JumpBoostCollision : MonoBehaviour
 {
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        // When the player touches the magnet, it will disappear while set the magnet bool to true
+
+        // When the player touches the power jump, it will disappear while set the power jump bool to true
         if (collision.tag == ("Player"))
         {
-            Abilities.magnet = true;
+            Abilities.powerJump = true;
             Destroy(gameObject);
-            
+
         }
 
     }

@@ -11,6 +11,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public InputField usernameInput;
     public Text buttonText;
 
+    // Sets username to what the player has written in input field, and when the "connect" button is pressed, the player will enter the lobby scene
     public void OnClickConnect() 
     {
 
@@ -23,6 +24,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     }
 
+    // The lobby scene will be loaded
     public override void OnConnectedToMaster()
     {
 

@@ -7,6 +7,7 @@ public class Abilities : MonoBehaviour
 
     public GameObject player;
 
+    // All abilities set standarly to false
     public static bool magnet = false;
     public static bool powerJump = false;
     public static bool shield = false;
@@ -18,6 +19,7 @@ public class Abilities : MonoBehaviour
     void Update()
     {
 
+        // If player activates ability using the X key
         if (Input.GetKey(KeyCode.X))
         {
             UseAbility();
@@ -25,6 +27,8 @@ public class Abilities : MonoBehaviour
 
     }
 
+    // An ability activates depending on which ability has been aquired
+    // If player already has an ability, but aquires a new one, the new ability will replace the old by setting it to false
     void UseAbility()
     {
 
@@ -41,6 +45,7 @@ public class Abilities : MonoBehaviour
 
         if (powerJump == true)
         {
+            player.GetComponent<AB>().Ab_JumpBoost();
 
             magnet = false;
             shield = false;

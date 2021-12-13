@@ -24,7 +24,8 @@ public class EnemyCharacter : MonoBehaviour
         RaycastHit2D sideRightInfo = Physics2D.Raycast(sideRightDetection.position, Vector2.right, distance, LayerMask.GetMask("Obstacle", "Enemy"));
         RaycastHit2D sideLeftInfo = Physics2D.Raycast(sideRightDetection.position, Vector2.left, distance, LayerMask.GetMask("Obstacle", "Enemy"));
 
-        // If the ground checker does not register any ground beneath the enemy, the enemy will turn and walk left. Else it walks right.
+        // If the ground checker does not register any ground beneath the enemy, the enemy will turn and walk left
+        // Else it walks right
         if (groundInfo.collider == false)
         {
             if (movingRight == true)

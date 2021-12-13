@@ -11,6 +11,7 @@ public class CoinsUI : MonoBehaviour
     void Update()
     {
 
+        // Sets the text next to the coin icon in the UI to how many coins the player has collected
         coinsText.text = "x" + PlayerCoins.coins;
 
     }

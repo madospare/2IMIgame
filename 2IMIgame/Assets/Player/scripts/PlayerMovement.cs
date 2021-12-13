@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
+        // This code applies only if input is from local player, and not other players
         if (view.IsMine)
         {
             // Player input
@@ -50,13 +51,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
+        // This code applies only if input is from local player, and not other players
         if (view.IsMine)
         {
             // Move character
             controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
             jump = false;
 
+            // For climbing ladders
             RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, Ladder);
 
             if (hitInfo.collider != null)

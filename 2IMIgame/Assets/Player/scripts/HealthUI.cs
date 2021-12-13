@@ -11,6 +11,7 @@ public class HealthUI : MonoBehaviour
     void Update()
     {
 
+        // The text next to the heart icon in the UI will show the number of lives the player has
         livesText.text = "x" + PlayerHealth.health;
 
     }
