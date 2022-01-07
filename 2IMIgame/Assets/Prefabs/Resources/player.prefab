@@ -4981,6 +4981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578a4ca8c15e64945acef8a9f82943c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_JumpForce: 700
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -5077,6 +5078,7 @@ MonoBehaviour:
   timer: 10
   magnetEffect: {fileID: 1853722383}
   controller: {fileID: 3793539968050069874}
+  numOfJumps: 6
 --- !u!114 &3793539968050069886
 MonoBehaviour:
   m_ObjectHideFlags: 0

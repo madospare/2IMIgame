@@ -19,6 +19,7 @@ public class AB : MonoBehaviour
         // On start the magnet radius is inactive
         radius = GameObject.FindGameObjectWithTag("MagnetRadius");
         radius.SetActive(false);
+        
 
     }
 
@@ -56,27 +57,27 @@ public class AB : MonoBehaviour
     }
 
     // Function activating the power jump
-    public void Ab_JumpBoost()
-    {
+    //public void Ab_JumpBoost()
+    //{
 
         
-        if (Abilities.powerJump == true)
-        {
-            numOfJumps = 6;
-            CharacterController2D.m_JumpForce *= 3f;
+        //if (Abilities.powerJump == true)
+       // {
+           // numOfJumps = 6;
+            //CharacterController2D.m_JumpForce *= 3f;
             
-            if(Input.GetButtonDown("Jump"))
-            {
-                numOfJumps -= 1;
-            }
-        }
+            //if(Input.GetButtonDown("Jump"))
+           // {
+           //     numOfJumps -= 1;
+           // }
+       // }
 
-        if (numOfJumps <= 0)
-        {
-            CharacterController2D.m_JumpForce = 700f;
-            Abilities.powerJump = false;
-        }
+        //if (numOfJumps <= 0)
+        //{
+            //CharacterController2D.m_JumpForce = 700f;
+           // Abilities.powerJump = false;
+       // }
 
-    }
+   // }
 
 }

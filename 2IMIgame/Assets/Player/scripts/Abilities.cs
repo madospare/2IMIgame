@@ -45,7 +45,7 @@ public class Abilities : MonoBehaviour
 
         if (powerJump == true)
         {
-            player.GetComponent<AB>().Ab_JumpBoost();
+            //player.GetComponent<AB>().Ab_JumpBoost();
 
             magnet = false;
             shield = false;
