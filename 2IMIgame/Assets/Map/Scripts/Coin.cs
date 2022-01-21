@@ -36,6 +36,11 @@ public class Coin : MonoBehaviour
         if (collision.tag == ("Player"))
         {
             Destroy(gameObject);
+            // If player touches a coin, it will be added to the player's score
+            if (collision.tag == ("Player"))
+            {
+                PlayerCoins.coins += 1;
+            }
         }
 
         // If player has activated the magnet and the coin touches the trigger collider of the magnet radius, within radius will be set to true

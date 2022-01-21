@@ -16,15 +16,4 @@ public class PlayerCoins : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-        // If player touches a coin, it will be added to the player's score
-        if (collision.tag == ("Coin"))
-        {
-            coins += 1;
-        }
-
-    }
-
 }
