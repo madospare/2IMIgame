@@ -2664,6 +2664,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1853722386, guid: d87a1e0e18f68b441b54ef89a25ba38e, type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853722386, guid: d87a1e0e18f68b441b54ef89a25ba38e, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853722386, guid: d87a1e0e18f68b441b54ef89a25ba38e, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853722386, guid: d87a1e0e18f68b441b54ef89a25ba38e, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3793539968050069877, guid: d87a1e0e18f68b441b54ef89a25ba38e, type: 3}
       propertyPath: m_Name
       value: player
