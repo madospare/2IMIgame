@@ -21,4 +21,10 @@ public class Buttons : MonoBehaviour
         Debug.Log("bug report clicked");
     }
 
+    public void ViewUpdates()
+    {
+        Application.OpenURL("");
+        Debug.Log("updates report clicked");
+    }
+
 }
