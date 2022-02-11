@@ -17,13 +17,13 @@ public class Buttons : MonoBehaviour
 
     public void BugReport()
     {
-        Application.OpenURL("");
+        Application.OpenURL("http://localhost/2IMIGame/nettside/HTML/support.html");
         Debug.Log("bug report clicked");
     }
 
     public void ViewUpdates()
     {
-        Application.OpenURL("");
+        Application.OpenURL("http://localhost/2IMIGame/nettside/index.html");
         Debug.Log("updates report clicked");
     }
 
