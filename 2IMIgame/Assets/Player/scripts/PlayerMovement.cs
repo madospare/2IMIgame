@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController2D controller;
+    public Animator animator;
 
     public float runSpeed = 40f;
 
@@ -40,12 +41,26 @@ public class PlayerMovement : MonoBehaviour
         {
             // Player input
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
             }
+
+            if (jump == true)
+            {
+                animator.SetBool("IsJumping", true);
+            }
         }
+
+    }
+
+    public void OnLanding()
+    {
+
+        animator.SetBool("IsJumping", false);
+        animator.SetBool("IsClimbing", false);
 
     }
 
@@ -79,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
             if (isClimbing == true && hitInfo.collider != null)
             {
                 verticalMove = Input.GetAxisRaw("Vertical") * climbSpeed;
+                animator.SetFloat("Climb", verticalMove);
                 rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
                 rb.gravityScale = 0;
             } else

@@ -10,8 +10,8 @@ public class HighscoreControl : MonoBehaviour
 {
 
     private string secretKey = "mySecretKey";
-    public string addScoreURL = "http://localhost/2IMIGame/addscore.php?";
-    public string highscoreURL = "http://localhost/2IMIGame/display.php";
+    public string addScoreURL = "http://172.23.176.29/PHP/addscore.php?";
+    public string highscoreURL = "http://172.23.176.29/PHP/display.php";
     public Text nameTextInput;
     public Text scoreTextInput;
     public Text nameResultText;

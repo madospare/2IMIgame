@@ -18,13 +18,11 @@ public class Buttons : MonoBehaviour
     public void BugReport()
     {
         Application.OpenURL("http://172.23.176.29/HTML/support.html");
-        Debug.Log("bug report clicked");
     }
 
     public void ViewUpdates()
     {
         Application.OpenURL("http://172.23.176.29/index.html");
-        Debug.Log("updates report clicked");
     }
 
 }
