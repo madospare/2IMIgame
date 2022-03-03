@@ -43,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+            verticalMove = Input.GetAxisRaw("Vertical") * climbSpeed;
+
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
@@ -52,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("IsJumping", true);
             }
+
+            if (isClimbing == true)
+            {
+                animator.SetFloat("Climb", Mathf.Abs(verticalMove));
+                animator.SetBool("IsJumping", false);
+            }
         }
 
     }
@@ -60,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
     {
 
         animator.SetBool("IsJumping", false);
-        animator.SetBool("IsClimbing", false);
 
     }
 
@@ -79,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (hitInfo.collider != null)
             {
+                animator.SetBool("IsJumping", false);
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
                     isClimbing = true;
@@ -93,8 +101,6 @@ public class PlayerMovement : MonoBehaviour
 
             if (isClimbing == true && hitInfo.collider != null)
             {
-                verticalMove = Input.GetAxisRaw("Vertical") * climbSpeed;
-                animator.SetFloat("Climb", verticalMove);
                 rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
                 rb.gravityScale = 0;
             } else
