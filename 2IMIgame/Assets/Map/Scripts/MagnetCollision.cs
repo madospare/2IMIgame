@@ -12,6 +12,11 @@ public class MagnetCollision : MonoBehaviour
         if (collision.tag == ("Player"))
         {
             Abilities.magnet = true;
+            Abilities.powerJump = false;
+            Abilities.shield = false;
+            Abilities.pushSpell = false;
+            Abilities.blindness = false;
+            Abilities.heal = false;
             Destroy(gameObject);
             
         }

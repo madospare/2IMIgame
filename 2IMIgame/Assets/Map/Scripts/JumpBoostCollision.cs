@@ -11,6 +11,11 @@ public class JumpBoostCollision : MonoBehaviour
         if (collision.tag == ("Player"))
         {
             Abilities.powerJump = true;
+            Abilities.magnet = false;
+            Abilities.shield = false;
+            Abilities.pushSpell = false;
+            Abilities.blindness = false;
+            Abilities.heal = false;
             Destroy(gameObject);
 
         }
