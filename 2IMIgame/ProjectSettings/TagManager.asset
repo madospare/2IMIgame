@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - MagnetRadius
   - NumOfLives
+  - DeathEffect
   layers:
   - Default
   - TransparentFX
@@ -46,9 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3753431505
+  - name: UI
+    uniqueID: 681988217
     locked: 0
-  - name: healthUI
-    uniqueID: 1078819755
+  - name: Player
+    uniqueID: 1831544775
     locked: 0

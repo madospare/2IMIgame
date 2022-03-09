@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,12 +21,9 @@ public class PlayerMovement : MonoBehaviour
     float verticalMove = 0f;
     public float climbSpeed = 80f;
 
-    PhotonView view;
-
     private void Start()
     {
 
-        view = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -35,10 +31,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        // This code applies only if input is from local player, and not other players
-        if (view.IsMine)
-        {
+     
             // Player input
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -62,8 +55,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-    }
-
     public void OnLanding()
     {
 
@@ -74,9 +65,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        // This code applies only if input is from local player, and not other players
-        if (view.IsMine)
-        {
             // Move character
             controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
             jump = false;
@@ -107,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.gravityScale = 3;
             }
-        }
 
     }
 

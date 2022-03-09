@@ -5,13 +5,17 @@ using UnityEngine;
 public class AB : MonoBehaviour
 {
 
+    public CharacterController2D controller;
+
     public static GameObject radius;
     public static bool magnetON = false;
-    public float timer = 40f;
-
+    public float magnetTimer = 40f;
     public GameObject magnetEffect;
-    public CharacterController2D controller;
-    public int numOfJumps = 6;
+
+    public bool jumpBoost = false;
+    public float jumpTimer = 40f;
+    public GameObject jumpBoostEffect;
+    public GameObject powerJumpEffect;
 
     void Start()
     {
@@ -19,6 +23,11 @@ public class AB : MonoBehaviour
         // On start the magnet radius is inactive
         radius = GameObject.FindGameObjectWithTag("MagnetRadius");
         radius.SetActive(false);
+
+        // On start the jump effects are inactive
+        jumpBoostEffect.SetActive(false);
+        powerJumpEffect.SetActive(false);
+
         
 
     }
@@ -26,25 +35,62 @@ public class AB : MonoBehaviour
     // Sets a timer for how long the ability will last
     void Update()
     {
-
+        
+        // Magnet timer
         if (Abilities.magnet == true)
         {
-            timer -= Time.deltaTime;
 
-            if (timer < 0)
+            magnetTimer -= Time.deltaTime;
+
+            if (magnetTimer < 0)
             {
                 radius.SetActive(false);
                 magnetON = false;
                 Coin.withinRadius = false;
                 Abilities.magnet = false;
+                
 
-                timer = 10;
+                magnetTimer = 10;
             }
         } else
         {
-            timer = 10;
+            magnetTimer = 10;
         }
-        
+
+        // Power Jump timer
+        if (jumpBoost == true)
+        {
+
+            controller.m_JumpForce = 1200f;
+            jumpBoostEffect.SetActive(true);
+
+            // Power Jump activated when player jumps
+            if (Input.GetButton("Jump"))
+            {
+                powerJumpEffect.SetActive(true);
+                
+            } else
+            {
+                powerJumpEffect.SetActive(false);
+            }
+
+            jumpTimer -= Time.deltaTime;
+
+            if (jumpTimer < 0)
+            {
+                controller.m_JumpForce = 700f;
+                Abilities.powerJump = false;
+                jumpBoost = false;
+                jumpBoostEffect.SetActive(false);
+                powerJumpEffect.SetActive(false);
+
+                jumpTimer = 10;
+            }
+        } else
+        {
+            jumpTimer = 10;
+        }
+
     }
 
     // Function acitvating the magnet and its radius
@@ -57,27 +103,11 @@ public class AB : MonoBehaviour
     }
 
     // Function activating the power jump
-    //public void Ab_JumpBoost()
-    //{
+    public void Ab_JumpBoost()
+    {
 
-        
-        //if (Abilities.powerJump == true)
-       // {
-           // numOfJumps = 6;
-            //CharacterController2D.m_JumpForce *= 3f;
-            
-            //if(Input.GetButtonDown("Jump"))
-           // {
-           //     numOfJumps -= 1;
-           // }
-       // }
+        jumpBoost = true;
 
-        //if (numOfJumps <= 0)
-        //{
-            //CharacterController2D.m_JumpForce = 700f;
-           // Abilities.powerJump = false;
-       // }
-
-   // }
+    }
 
 }

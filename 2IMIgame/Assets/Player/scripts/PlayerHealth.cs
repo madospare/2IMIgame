@@ -10,12 +10,14 @@ public class PlayerHealth : MonoBehaviour
     public int numOfLives;
 
     public GameObject player;
+    public GameObject deathEffect;
     private Text LivesText;
     private CheckPoint checkPoint;
 
     void Start()
     {
         health = numOfLives;
+        deathEffect.SetActive(false);
     }
 
     void Update()
@@ -38,6 +40,8 @@ public class PlayerHealth : MonoBehaviour
         
         if (health == 0)
         {
+            deathEffect.SetActive(true);
+            Instantiate(deathEffect, player.transform.position, player.transform.rotation);
             Destroy(player);
             LivesText.text = "x0";
         }
