@@ -9,11 +9,11 @@ public class AB : MonoBehaviour
 
     public static GameObject radius;
     public static bool magnetON = false;
-    public float magnetTimer = 40f;
+    public static float magnetTimer = 40f;
     public GameObject magnetEffect;
 
-    public bool jumpBoost = false;
-    public float jumpTimer = 40f;
+    public static bool jumpBoost = false;
+    public static float jumpTimer = 40f;
     public GameObject jumpBoostEffect;
     public GameObject powerJumpEffect;
 
@@ -48,7 +48,6 @@ public class AB : MonoBehaviour
                 magnetON = false;
                 Coin.withinRadius = false;
                 Abilities.magnet = false;
-                
 
                 magnetTimer = 10;
             }
