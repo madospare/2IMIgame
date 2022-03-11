@@ -14,6 +14,11 @@ public class PlayerHealth : MonoBehaviour
     private Text LivesText;
     private CheckPoint checkPoint;
 
+    public int shieldLife;
+    public Sprite healthIcon;
+    public Sprite defendedHeart;
+    public SpriteRenderer rend;
+
     void Start()
     {
         health = numOfLives;
@@ -23,9 +28,14 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         
-        if(health > numOfLives)
+        if (health > numOfLives && Abilities.shield != true)
         {
             health = numOfLives;
+        }
+
+        // Replace heart with shielded heart when shield is active
+        if (AB.shieldON == true) {
+            rend.sprite = defendedHeart;
         }
 
     }
@@ -33,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
 
-        if (collisionInfo.collider.tag == ("Enemy"))
+        if (collisionInfo.collider.tag == ("Enemy") && AB.shieldON != true)
         {
             health -= 1;
         } 
@@ -44,6 +54,19 @@ public class PlayerHealth : MonoBehaviour
             Instantiate(deathEffect, player.transform.position, player.transform.rotation);
             Destroy(player);
             LivesText.text = "x0";
+        }
+
+        // For when player collides with enemy while shielded
+        if (collisionInfo.collider.tag == ("Enemy") && AB.shieldON == true)
+        {
+            shieldLife -= 1;
+        }
+
+        if (shieldLife == 0)
+        {
+            AB.shieldON = false;
+            Abilities.shield = false;
+            rend.sprite = healthIcon;
         }
        
     }

@@ -44,7 +44,7 @@ public class AbilityUI : MonoBehaviour
         } else
         {
             rend.sprite = null;
-            
+
             if (AB.magnetON == false)
             {
                 numTimer.gameObject.SetActive(false);
@@ -60,13 +60,12 @@ public class AbilityUI : MonoBehaviour
             {
                 numTimer.gameObject.SetActive(true);
                 numTimer.text = AB.jumpTimer.ToString("F0");
-            }
-        } else
-        {
-
-            if (AB.jumpBoost == false)
+            } else
             {
-                numTimer.gameObject.SetActive(false);
+                if (AB.jumpBoost == false)
+                {
+                    numTimer.gameObject.SetActive(false);
+                }
             }
         }
 

@@ -17,6 +17,10 @@ public class AB : MonoBehaviour
     public GameObject jumpBoostEffect;
     public GameObject powerJumpEffect;
 
+    public static bool shieldON = false;
+    public GameObject shieldBubble;
+
+
     void Start()
     {
 
@@ -28,7 +32,8 @@ public class AB : MonoBehaviour
         jumpBoostEffect.SetActive(false);
         powerJumpEffect.SetActive(false);
 
-        
+        // On start the shield bubble is inactive
+        shieldBubble.SetActive(false);
 
     }
 
@@ -39,7 +44,7 @@ public class AB : MonoBehaviour
         // Magnet timer
         if (Abilities.magnet == true)
         {
-
+            //Debug.Log();
             magnetTimer -= Time.deltaTime;
 
             if (magnetTimer < 0)
@@ -54,6 +59,13 @@ public class AB : MonoBehaviour
         } else
         {
             magnetTimer = 10;
+        }
+
+        if (Abilities.magnet == false)
+        {
+            radius.SetActive(false);
+            magnetON = false;
+            Coin.withinRadius = false;
         }
 
         // Power Jump timer
@@ -90,6 +102,24 @@ public class AB : MonoBehaviour
             jumpTimer = 10;
         }
 
+        if (jumpBoost == false)
+        {
+            controller.m_JumpForce = 700f;
+            jumpBoost = false;
+            jumpBoostEffect.SetActive(false);
+            powerJumpEffect.SetActive(false);
+        }
+
+        // Shield bubble
+        if (shieldON == true)
+        {
+            shieldBubble.SetActive(true);
+        }
+        else
+        {
+            shieldBubble.SetActive(false);
+        }
+
     }
 
     // Function acitvating the magnet and its radius
@@ -106,6 +136,14 @@ public class AB : MonoBehaviour
     {
 
         jumpBoost = true;
+
+    }
+
+    // Function activating the shield
+    public void Ab_Shield()
+    {
+
+        shieldON = true;
 
     }
 
