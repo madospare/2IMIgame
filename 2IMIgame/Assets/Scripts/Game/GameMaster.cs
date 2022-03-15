@@ -29,8 +29,23 @@ public class GameMaster : MonoBehaviour
             return;
         }
 
+        // Cursor is only active when in menus
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Menu") || DeathScreen.activeSelf == false)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Menu") || DeathScreen.activeSelf == true)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+
     }
 
+    // Death Screen Buttons
     public void Retry()
     {
 
