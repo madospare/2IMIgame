@@ -62,6 +62,13 @@ public class PlayerHealth : MonoBehaviour
             shieldLife -= 1;
         }
 
+        if (collisionInfo.collider.tag == ("Enemy") && collisionInfo.collider.gameObject.layer == 13 && AB.shieldON == true)
+        {
+            AB.shieldON = true;
+            Abilities.shield = true;
+            shieldLife = 1;
+        }
+
         if (shieldLife == 0)
         {
             AB.shieldON = false;

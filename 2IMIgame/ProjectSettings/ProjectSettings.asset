@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: 2IMIgame
+  companyName: Mathias2IMI
+  productName: CNACK
   defaultCursor: {fileID: 2800000, guid: 21bafc850ed3b9c4e95c95484e46c022, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -270,7 +270,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 3469e74e30b334e4e97c12a139602f3a, type: 3}
+      m_Icon: {fileID: 2800000, guid: f6274735d4495d6469613bd822859651, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

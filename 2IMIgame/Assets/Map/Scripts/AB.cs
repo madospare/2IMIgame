@@ -7,7 +7,7 @@ public class AB : MonoBehaviour
 
     public CharacterController2D controller;
 
-    public static GameObject radius;
+    public static GameObject magnetRadius;
     public static bool magnetON = false;
     public static float magnetTimer = 40f;
     public GameObject magnetEffect;
@@ -20,13 +20,17 @@ public class AB : MonoBehaviour
     public static bool shieldON = false;
     public GameObject shieldBubble;
 
+    public static bool push = false;
+    public static GameObject pushRadius;
+    public static CircleCollider2D pushCollider;
+
 
     void Start()
     {
 
         // On start the magnet radius is inactive
-        radius = GameObject.FindGameObjectWithTag("MagnetRadius");
-        radius.SetActive(false);
+        magnetRadius = GameObject.FindGameObjectWithTag("MagnetRadius");
+        magnetRadius.SetActive(false);
 
         // On start the jump effects are inactive
         jumpBoostEffect.SetActive(false);
@@ -34,6 +38,12 @@ public class AB : MonoBehaviour
 
         // On start the shield bubble is inactive
         shieldBubble.SetActive(false);
+
+        // On start the push radius is inactive
+        pushRadius = GameObject.FindGameObjectWithTag("PushRadius");
+        pushCollider = pushRadius.GetComponent<CircleCollider2D>();
+        pushCollider.radius = 0.05f;
+        pushRadius.SetActive(false);
 
     }
 
@@ -44,12 +54,11 @@ public class AB : MonoBehaviour
         // Magnet timer
         if (Abilities.magnet == true)
         {
-            //Debug.Log();
             magnetTimer -= Time.deltaTime;
 
             if (magnetTimer < 0)
             {
-                radius.SetActive(false);
+                magnetRadius.SetActive(false);
                 magnetON = false;
                 Coin.withinRadius = false;
                 Abilities.magnet = false;
@@ -63,7 +72,7 @@ public class AB : MonoBehaviour
 
         if (Abilities.magnet == false)
         {
-            radius.SetActive(false);
+            magnetRadius.SetActive(false);
             magnetON = false;
             Coin.withinRadius = false;
         }
@@ -120,13 +129,31 @@ public class AB : MonoBehaviour
             shieldBubble.SetActive(false);
         }
 
+        // Push spell
+        if (push == true)
+        {
+            pushRadius.SetActive(true);
+            pushCollider.radius += 0.002f;
+            ParticleSystem.ShapeModule pushEffect = pushRadius.GetComponent<ParticleSystem>().shape;
+            pushEffect.radius += 0.15f;
+
+            if (pushCollider.radius > 0.5f)
+            {
+                pushRadius.SetActive(false);
+                pushCollider.radius = 0.05f;
+                push = false;
+                Abilities.pushSpell = false;
+
+            }
+        }
+
     }
 
     // Function acitvating the magnet and its radius
     public void Ab_AttractCoins()
     {
 
-        radius.SetActive(true);
+        magnetRadius.SetActive(true);
         magnetON = true;
 
     }
@@ -144,6 +171,14 @@ public class AB : MonoBehaviour
     {
 
         shieldON = true;
+
+    }
+
+    // Function activating the push spell
+    public void Ab_Push()
+    {
+
+        push = true;
 
     }
 

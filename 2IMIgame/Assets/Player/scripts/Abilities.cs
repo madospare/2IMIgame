@@ -67,6 +67,7 @@ public class Abilities : MonoBehaviour
 
         if (pushSpell == true)
         {
+            player.GetComponent<AB>().Ab_Push();
 
             magnet = false;
             powerJump = false;

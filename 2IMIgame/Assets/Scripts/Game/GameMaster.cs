@@ -15,6 +15,8 @@ public class GameMaster : MonoBehaviour
     {
 
         DeathScreen.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -30,16 +32,15 @@ public class GameMaster : MonoBehaviour
         }
 
         // Cursor is only active when in menus
-        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Menu") || DeathScreen.activeSelf == false)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Menu") || DeathScreen.activeSelf == true)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+        } else
+        {
+            
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
 
@@ -49,14 +50,14 @@ public class GameMaster : MonoBehaviour
     public void Retry()
     {
 
-        SceneManager.LoadScene("Lvl1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
 
     public void Exit()
     {
 
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Stages");
 
     }
 

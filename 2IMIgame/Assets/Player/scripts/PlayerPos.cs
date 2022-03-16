@@ -39,7 +39,7 @@ public class PlayerPos : MonoBehaviour
         }
 
         // The local player will return to latest checkpoint if hit by an enemy
-        if (collisionInfo.collider.tag == ("Enemy") && PlayerHealth.health != 1)
+        if (collisionInfo.collider.tag == ("Enemy") && PlayerHealth.health != 1 && AB.shieldON != true)
         {
             player.transform.position = gm.lastCheckPointPos;
         }
