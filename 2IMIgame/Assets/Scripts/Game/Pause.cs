@@ -57,10 +57,4 @@ public class Pause : MonoBehaviour
 
     }
 
-    public void ExitGame()
-    {
-
-        Application.Quit();
-
-    }
 }

@@ -2290,7 +2290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 574659993}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1473842140}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &574659993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2399,7 +2411,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXIT TO MAIN MENU
+  m_Text: STAGE SELECT
 --- !u!222 &618016059
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2508,7 +2520,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXIT
+  m_Text: QUIT
 --- !u!222 &659591511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3156,7 +3168,7 @@ GameObject:
   - component: {fileID: 932885752}
   - component: {fileID: 932885751}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3907,7 +3919,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXIT GAME
+  m_Text: EXIT TO MAIN MENU
 --- !u!222 &1209229221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4065,7 +4077,7 @@ GameObject:
   - component: {fileID: 1308942620}
   - component: {fileID: 1308942619}
   m_Layer: 5
-  m_Name: ExitToMenu
+  m_Name: ExitToStages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4676,6 +4688,7 @@ GameObject:
   - component: {fileID: 1473842138}
   - component: {fileID: 1473842139}
   - component: {fileID: 1473842137}
+  - component: {fileID: 1473842140}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GM
@@ -4724,6 +4737,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastCheckPointPos: {x: -9.8, y: -5.799}
   DeathScreen: {fileID: 538744757}
+--- !u!114 &1473842140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473842136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7096909966e23b748912963ac27da3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1509714444
 GameObject:
   m_ObjectHideFlags: 0

@@ -62,6 +62,7 @@ public class PlayerHealth : MonoBehaviour
             shieldLife -= 1;
         }
 
+        // For when player collides with spikes while shielded
         if (collisionInfo.collider.tag == ("Enemy") && collisionInfo.collider.gameObject.layer == 13 && AB.shieldON == true)
         {
             AB.shieldON = true;
