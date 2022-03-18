@@ -60,6 +60,7 @@ public class AB : MonoBehaviour
             {
                 magnetRadius.SetActive(false);
                 magnetON = false;
+                FindObjectOfType<AudioManager>().Stop("Magnet");
                 Coin.withinRadius = false;
                 Abilities.magnet = false;
 
@@ -155,6 +156,11 @@ public class AB : MonoBehaviour
 
         magnetRadius.SetActive(true);
         magnetON = true;
+
+        if (magnetON == true)
+        {
+            FindObjectOfType<AudioManager>().Play("Magnet");
+        }
 
     }
 

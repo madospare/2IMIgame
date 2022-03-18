@@ -35,10 +35,10 @@ public class Projectile : MonoBehaviour
     }
 
     // Projectile is destroyed when either colliding with player or something else
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
 
-        if (other.CompareTag("Player"))
+        if (other.collider.tag == ("Player"))
         {
             DestroyProjectile();
         }

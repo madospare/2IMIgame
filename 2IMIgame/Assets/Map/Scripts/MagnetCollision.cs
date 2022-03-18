@@ -12,6 +12,7 @@ public class MagnetCollision : MonoBehaviour
         if (collision.tag == ("Player"))
         {
             Abilities.magnet = true;
+            FindObjectOfType<AudioManager>().Play("PowerUp");
             Abilities.powerJump = false;
             Abilities.shield = false;
             Abilities.pushSpell = false;

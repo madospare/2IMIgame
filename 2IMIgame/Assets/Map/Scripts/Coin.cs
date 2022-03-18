@@ -40,6 +40,7 @@ public class Coin : MonoBehaviour
             if (collision.tag == ("Player"))
             {
                 PlayerCoins.coins += 1;
+                FindObjectOfType<AudioManager>().Play("Coin");
             }
         }
 

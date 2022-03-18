@@ -35,6 +35,7 @@ public class Abilities : MonoBehaviour
         if (magnet == true)
         {
             player.GetComponent<AB>().Ab_AttractCoins();
+            FindObjectOfType<AudioManager>().Play("ActivatePower");
 
             powerJump = false;
             shield = false;
@@ -46,6 +47,7 @@ public class Abilities : MonoBehaviour
         if (powerJump == true)
         {
             player.GetComponent<AB>().Ab_JumpBoost();
+            FindObjectOfType<AudioManager>().Play("ActivatePower");
 
             magnet = false;
             shield = false;
@@ -57,6 +59,7 @@ public class Abilities : MonoBehaviour
         if (shield == true)
         {
             player.GetComponent<AB>().Ab_Shield();
+            FindObjectOfType<AudioManager>().Play("ActivatePower");
 
             magnet = false;
             powerJump = false;
@@ -68,6 +71,7 @@ public class Abilities : MonoBehaviour
         if (pushSpell == true)
         {
             player.GetComponent<AB>().Ab_Push();
+            FindObjectOfType<AudioManager>().Play("ActivatePower");
 
             magnet = false;
             powerJump = false;

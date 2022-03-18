@@ -11,6 +11,7 @@ public class JumpBoostCollision : MonoBehaviour
         if (collision.tag == ("Player"))
         {
             Abilities.powerJump = true;
+            FindObjectOfType<AudioManager>().Play("PowerUp");
             Abilities.magnet = false;
             Abilities.shield = false;
             Abilities.pushSpell = false;

@@ -28,6 +28,7 @@ public class Shoot : MonoBehaviour
         if (timeBtwShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Shoot");
             timeBtwShots = startTimeBtwShots;
         } else
         {

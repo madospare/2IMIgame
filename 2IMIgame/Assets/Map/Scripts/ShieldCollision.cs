@@ -11,6 +11,7 @@ public class ShieldCollision : MonoBehaviour
         if (collision.tag == ("Player"))
         {
             Abilities.shield = true;
+            FindObjectOfType<AudioManager>().Play("PowerUp");
             Abilities.powerJump = false;
             Abilities.magnet = false;
             Abilities.pushSpell = false;

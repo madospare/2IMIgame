@@ -46,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
         if (collisionInfo.collider.tag == ("Enemy") && AB.shieldON != true)
         {
             health -= 1;
+            FindObjectOfType<AudioManager>().Play("Hurt");
         } 
         
         if (health == 0)
@@ -64,6 +65,14 @@ public class PlayerHealth : MonoBehaviour
 
         // For when player collides with spikes while shielded
         if (collisionInfo.collider.tag == ("Enemy") && collisionInfo.collider.gameObject.layer == 13 && AB.shieldON == true)
+        {
+            AB.shieldON = true;
+            Abilities.shield = true;
+            shieldLife = 1;
+        }
+
+        // For when player collides with projectiles while shielded
+        if (collisionInfo.collider.tag == ("Enemy") && collisionInfo.collider.gameObject.layer == 12 && AB.shieldON == true)
         {
             AB.shieldON = true;
             Abilities.shield = true;

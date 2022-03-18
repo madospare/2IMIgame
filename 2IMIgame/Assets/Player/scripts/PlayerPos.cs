@@ -32,7 +32,7 @@ public class PlayerPos : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
 
-        // Checkpoint activates when local player touches it
+        // Checkpoint activates when player touches it
         if (collisionInfo.collider.tag == ("CheckPoint"))
         {
             gm.lastCheckPointPos = transform.position;
@@ -42,6 +42,7 @@ public class PlayerPos : MonoBehaviour
         if (collisionInfo.collider.tag == ("Enemy") && PlayerHealth.health != 1 && AB.shieldON != true)
         {
             player.transform.position = gm.lastCheckPointPos;
+            FindObjectOfType<AudioManager>().Play("Checkpoint");
         }
 
     }

@@ -33,8 +33,6 @@ public class Pause : MonoBehaviour
             }
         }
 
-
-
     }
 
     public void PauseGame()
