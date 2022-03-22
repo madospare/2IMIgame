@@ -7,9 +7,22 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
+    public static AudioManager instance;
+
     void Awake()
     {
-        
+
+        if (instance == null)
+        {
+            instance = this;
+        } else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -22,15 +35,21 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("MainMenuTheme");
+    }
+
     public void Play(string name)
     {
 
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.Log("Error while trying to play audio clip. Probalby typo in audio manager. " + name + " wasn't found.");
+            Debug.LogWarning("Error while trying to play audio clip. Probalby typo in audio manager. " + name + " wasn't found.");
             return;
         }
+
         s.source.Play();
 
     }
@@ -40,14 +59,12 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.Log("Error while trying to play audio clip. Probalby typo in audio manager. " + name + " wasn't found.");
+            Debug.LogWarning("Error while trying to play audio clip. Probalby typo in audio manager. " + name + " wasn't found.");
             return;
         }
 
-        s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volume / 2f, s.volume / 2f));
-        s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitch / 2f, s.pitch / 2f));
-
         s.source.Stop();
+
     }
 
 }

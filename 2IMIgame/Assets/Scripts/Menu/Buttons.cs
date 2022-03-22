@@ -6,59 +6,99 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
 
-    public GameObject player;
-
     // For the main menu
     public void PlayGame()
     {
         SceneManager.LoadScene("Gamemode");
+        FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
     public void ExitGame()
     {
         Application.Quit();
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
+    }
+
+    public void Options()
+    {
+        SceneManager.LoadScene("Options");
+        FindObjectOfType<AudioManager>().Stop("MainMenuTheme");
+        FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
     public void BugReport()
     {
         Application.OpenURL("http://172.23.176.29/HTML/support.html");
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     public void ViewUpdates()
     {
         Application.OpenURL("http://172.23.176.29/index.html");
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     // For the gamemode menu
     public void Singleplayer()
     {
         SceneManager.LoadScene("Stages");
+
+        Abilities.magnet = false;
+        Abilities.powerJump = false;
+        Abilities.shield = false;
+        Abilities.pushSpell = false;
+        Abilities.blindness = false;
+        Abilities.heal = false;
+
+        FindObjectOfType<AudioManager>().Stop("MainMenuTheme");
+        FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Menu");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+    }
+
+    public void ExitToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        FindObjectOfType<AudioManager>().Play("MainMenuTheme");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
     }
 
     // For the stages menu
     public void StartLv1()
     {
         SceneManager.LoadScene("Lvl1");
+        FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     public void StartLv2()
     {
         SceneManager.LoadScene("Lvl2");
+        FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     public void StartLv3()
     {
         SceneManager.LoadScene("Lvl3");
+        FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     public void ReturnToGamemode()
     {
         SceneManager.LoadScene("Gamemode");
+        FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("MainMenuTheme");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
 

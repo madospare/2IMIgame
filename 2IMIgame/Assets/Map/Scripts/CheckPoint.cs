@@ -6,6 +6,7 @@ public class CheckPoint : MonoBehaviour
 {
 
     private GameMaster gm;
+    public Animator animator;
 
     void Start()
     {
@@ -21,6 +22,13 @@ public class CheckPoint : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             gm.lastCheckPointPos = transform.position;
+
+            if (animator.GetBool("IsActive") != true)
+            {
+                animator.SetBool("IsActive", true);
+                FindObjectOfType<AudioManager>().Play("Checkpoint");
+            }
+
         }
 
     }

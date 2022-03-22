@@ -21,8 +21,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+
         health = numOfLives;
         deathEffect.SetActive(false);
+
     }
 
     void Update()
@@ -36,6 +38,9 @@ public class PlayerHealth : MonoBehaviour
         // Replace heart with shielded heart when shield is active
         if (AB.shieldON == true) {
             rend.sprite = defendedHeart;
+        } else
+        {
+            rend.sprite = healthIcon;
         }
 
     }
@@ -61,14 +66,6 @@ public class PlayerHealth : MonoBehaviour
         if (collisionInfo.collider.tag == ("Enemy") && AB.shieldON == true)
         {
             shieldLife -= 1;
-        }
-
-        // For when player collides with spikes while shielded
-        if (collisionInfo.collider.tag == ("Enemy") && collisionInfo.collider.gameObject.layer == 13 && AB.shieldON == true)
-        {
-            AB.shieldON = true;
-            Abilities.shield = true;
-            shieldLife = 1;
         }
 
         // For when player collides with projectiles while shielded

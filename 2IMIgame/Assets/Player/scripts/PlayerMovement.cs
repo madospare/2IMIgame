@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
 
-    public float runSpeed = 40f;
+    public static float runSpeed = 40f;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 jump = true;
             }
 
-            if (jump == true)
+            if (jump == true && Water.isSwimming != true)
             {
                 animator.SetBool("IsJumping", true);
             }
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.gravityScale = 0;
             } else
             {
-                rb.gravityScale = 3;
+                //rb.gravityScale = 3;
             }
 
     }

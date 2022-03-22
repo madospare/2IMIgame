@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4431435079701510984}
   - component: {fileID: 4431435079701510991}
+  - component: {fileID: -8726776536880237651}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,3 +93,47 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: PushSpell
+    clip: {fileID: 8300000, guid: 1c0c95779d69b214ba7b01dcfed31e99, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MainMenuTheme
+    clip: {fileID: 8300000, guid: 95cef15ca75be6543ab66cf0b0ece73e, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: OtherMenusTheme
+    clip: {fileID: 8300000, guid: ba9669b92706d41498b0640a6398b73a, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: d98966ba76edd2341baef3cf94da02ce, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelSelectClick
+    clip: {fileID: 8300000, guid: 3dca4144af11ee241ac2026ca9bedb59, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Swim
+    clip: {fileID: 8300000, guid: 1272cc5d191fb2b4baa079bf3e63a030, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!81 &-8726776536880237651
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431435079701510990}
+  m_Enabled: 1

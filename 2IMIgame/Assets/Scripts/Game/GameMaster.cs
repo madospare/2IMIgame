@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour
 {
 
-    private static GameMaster instance;
     public Vector2 lastCheckPointPos;
 
     public GameObject DeathScreen;
@@ -43,7 +42,6 @@ public class GameMaster : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-
     }
 
     // Death Screen Buttons
@@ -52,12 +50,31 @@ public class GameMaster : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
+        Abilities.magnet = false;
+        Abilities.powerJump = false;
+        Abilities.shield = false;
+        Abilities.pushSpell = false;
+        Abilities.blindness = false;
+        Abilities.heal = false;
+
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+
     }
 
-    public void Exit()
+    public void ExitToScene()
     {
 
         SceneManager.LoadScene("Stages");
+
+        Abilities.magnet = false;
+        Abilities.powerJump = false;
+        Abilities.shield = false;
+        Abilities.pushSpell = false;
+        Abilities.blindness = false;
+        Abilities.heal = false;
+
+        FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
 
     }
 

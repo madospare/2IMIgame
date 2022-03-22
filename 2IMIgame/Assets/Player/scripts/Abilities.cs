@@ -15,6 +15,14 @@ public class Abilities : MonoBehaviour
     public static bool blindness = false;
     public static bool heal = false;
 
+    void Start()
+    {
+
+        player.GetComponent<AB>().enabled = false;
+
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +30,7 @@ public class Abilities : MonoBehaviour
         // If player activates ability using the X key
         if (Input.GetKey(KeyCode.X))
         {
+            player.GetComponent<AB>().enabled = true;
             UseAbility();
         }
 

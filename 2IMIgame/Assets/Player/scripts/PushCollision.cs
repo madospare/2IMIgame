@@ -12,7 +12,6 @@ public class PushCollision : MonoBehaviour
         if (collision.gameObject.layer == 7 || collision.gameObject.layer == 12)
         {
             Destroy(collision.gameObject);
-            Debug.Log("fhdeid");
         }
 
     }

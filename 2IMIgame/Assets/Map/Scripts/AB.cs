@@ -9,11 +9,11 @@ public class AB : MonoBehaviour
 
     public static GameObject magnetRadius;
     public static bool magnetON = false;
-    public static float magnetTimer = 40f;
+    public static float magnetTimer = 10f;
     public GameObject magnetEffect;
 
     public static bool jumpBoost = false;
-    public static float jumpTimer = 40f;
+    public static float jumpTimer = 10f;
     public GameObject jumpBoostEffect;
     public GameObject powerJumpEffect;
 
@@ -38,6 +38,7 @@ public class AB : MonoBehaviour
 
         // On start the shield bubble is inactive
         shieldBubble.SetActive(false);
+        shieldON = false;
 
         // On start the push radius is inactive
         pushRadius = GameObject.FindGameObjectWithTag("PushRadius");
@@ -131,7 +132,7 @@ public class AB : MonoBehaviour
         }
 
         // Push spell
-        if (push == true)
+        if (push == true && Time.timeScale != 0f)
         {
             pushRadius.SetActive(true);
             pushCollider.radius += 0.002f;
@@ -144,6 +145,8 @@ public class AB : MonoBehaviour
                 pushCollider.radius = 0.05f;
                 push = false;
                 Abilities.pushSpell = false;
+                FindObjectOfType<AudioManager>().Stop("Magnet");
+                FindObjectOfType<AudioManager>().Play("PushSpell");
 
             }
         }
@@ -185,6 +188,8 @@ public class AB : MonoBehaviour
     {
 
         push = true;
+
+        FindObjectOfType<AudioManager>().Play("Magnet");
 
     }
 

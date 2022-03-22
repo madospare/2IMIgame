@@ -38,10 +38,12 @@ public class Pause : MonoBehaviour
     public void PauseGame()
     {
 
-       PauseScreen.SetActive(true);
+        PauseScreen.SetActive(true);
         Time.timeScale = 0f;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
 
     }
 
@@ -52,6 +54,8 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
 
     }
 

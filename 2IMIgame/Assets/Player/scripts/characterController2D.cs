@@ -83,7 +83,15 @@ public class CharacterController2D : MonoBehaviour
 			// Add a vertical force to the player.
 			m_Grounded = true;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			FindObjectOfType<AudioManager>().Play("Jump");
+			
+			// For swimming
+			if (Water.isSwimming != true)
+            {
+				FindObjectOfType<AudioManager>().Play("Jump");
+			} else
+            {
+				FindObjectOfType<AudioManager>().Play("Swim");
+			}
 		}
 	}
 

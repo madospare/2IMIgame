@@ -19408,7 +19408,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 6
   m_Material: {fileID: 6200000, guid: 63bb9cc707f7bf34287ae2289ceb2161, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -19478,7 +19478,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 3793539968050069874}
   animator: {fileID: 874502150}
-  runSpeed: 40
   distance: 5
   Ladder:
     serializedVersion: 2

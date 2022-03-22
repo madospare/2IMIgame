@@ -25,6 +25,7 @@ public class PlayerPos : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.A))
         {
             player.transform.position = gm.lastCheckPointPos;
+            FindObjectOfType<AudioManager>().Play("Checkpoint");
         }
 
     }
@@ -42,7 +43,6 @@ public class PlayerPos : MonoBehaviour
         if (collisionInfo.collider.tag == ("Enemy") && PlayerHealth.health != 1 && AB.shieldON != true)
         {
             player.transform.position = gm.lastCheckPointPos;
-            FindObjectOfType<AudioManager>().Play("Checkpoint");
         }
 
     }
