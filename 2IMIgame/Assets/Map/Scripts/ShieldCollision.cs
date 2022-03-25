@@ -12,7 +12,7 @@ public class ShieldCollision : MonoBehaviour
         {
             Abilities.shield = true;
             FindObjectOfType<AudioManager>().Play("PowerUp");
-            Abilities.powerJump = false;
+            Abilities.gravControl = false;
             Abilities.magnet = false;
             Abilities.pushSpell = false;
             Abilities.blindness = false;

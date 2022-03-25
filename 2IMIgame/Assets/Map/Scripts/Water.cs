@@ -23,7 +23,7 @@ public class Water : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && AB.grav != true)
         {
             rb.gravityScale = 6;
             PlayerMovement.runSpeed = 15f;
@@ -36,7 +36,7 @@ public class Water : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collision)
     {
 
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && AB.grav != true)
         {
             rb.gravityScale = 3;
             PlayerMovement.runSpeed = 40f;

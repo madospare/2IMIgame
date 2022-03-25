@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
+        runSpeed = 40f;
+        rb.gravityScale = 3;
 
     }
 

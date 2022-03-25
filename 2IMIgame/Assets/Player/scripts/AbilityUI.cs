@@ -51,18 +51,18 @@ public class AbilityUI : MonoBehaviour
             }
         }
 
-        if (Abilities.powerJump == true)
+        if (Abilities.gravControl == true)
         {
             rend.sprite = powerJump;
 
             // Enable the Power Jump timer
-            if (AB.jumpBoost == true)
+            if (AB.grav == true)
             {
                 numTimer.gameObject.SetActive(true);
-                numTimer.text = AB.jumpTimer.ToString("F0");
+                numTimer.text = AB.gravTimer.ToString("F0");
             } else
             {
-                if (AB.jumpBoost == false)
+                if (AB.grav == false)
                 {
                     numTimer.gameObject.SetActive(false);
                 }

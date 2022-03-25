@@ -46,7 +46,7 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Stages");
 
         Abilities.magnet = false;
-        Abilities.powerJump = false;
+        Abilities.gravControl = false;
         Abilities.shield = false;
         Abilities.pushSpell = false;
         Abilities.blindness = false;

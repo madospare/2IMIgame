@@ -14,7 +14,7 @@ public class PushSpellCollision : MonoBehaviour
             Abilities.pushSpell = true;
             FindObjectOfType<AudioManager>().Play("PowerUp");
             Abilities.magnet = false;
-            Abilities.powerJump = false;
+            Abilities.gravControl = false;
             Abilities.shield = false;
             Abilities.blindness = false;
             Abilities.heal = false;

@@ -10,7 +10,7 @@ public class JumpBoostCollision : MonoBehaviour
         // When the player touches the power jump, it will disappear while set the power jump bool to true
         if (collision.tag == ("Player"))
         {
-            Abilities.powerJump = true;
+            Abilities.gravControl = true;
             FindObjectOfType<AudioManager>().Play("PowerUp");
             Abilities.magnet = false;
             Abilities.shield = false;

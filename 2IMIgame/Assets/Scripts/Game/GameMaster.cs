@@ -10,6 +10,8 @@ public class GameMaster : MonoBehaviour
 
     public GameObject DeathScreen;
 
+    public Rigidbody2D rb;
+
     void Start()
     {
 
@@ -51,7 +53,7 @@ public class GameMaster : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         Abilities.magnet = false;
-        Abilities.powerJump = false;
+        Abilities.gravControl = false;
         Abilities.shield = false;
         Abilities.pushSpell = false;
         Abilities.blindness = false;
@@ -67,11 +69,15 @@ public class GameMaster : MonoBehaviour
         SceneManager.LoadScene("Stages");
 
         Abilities.magnet = false;
-        Abilities.powerJump = false;
+        Abilities.gravControl = false;
         Abilities.shield = false;
         Abilities.pushSpell = false;
         Abilities.blindness = false;
         Abilities.heal = false;
+
+        Water.isSwimming = false;
+        rb.gravityScale = 3;
+        PlayerMovement.runSpeed = 40f;
 
         FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Play("ButtonClick");

@@ -6,16 +6,18 @@ public class AB : MonoBehaviour
 {
 
     public CharacterController2D controller;
+    public Rigidbody2D rb;
+    public GameObject player;
 
     public static GameObject magnetRadius;
     public static bool magnetON = false;
     public static float magnetTimer = 10f;
     public GameObject magnetEffect;
 
-    public static bool jumpBoost = false;
-    public static float jumpTimer = 10f;
-    public GameObject jumpBoostEffect;
-    public GameObject powerJumpEffect;
+    public static bool grav = false;
+    public static float gravTimer = 10f;
+    public bool gravSwap = false;
+    public GameObject gravControlEffect;
 
     public static bool shieldON = false;
     public GameObject shieldBubble;
@@ -32,9 +34,8 @@ public class AB : MonoBehaviour
         magnetRadius = GameObject.FindGameObjectWithTag("MagnetRadius");
         magnetRadius.SetActive(false);
 
-        // On start the jump effects are inactive
-        jumpBoostEffect.SetActive(false);
-        powerJumpEffect.SetActive(false);
+        // On start the jump effect is inactive
+        gravControlEffect.SetActive(false);
 
         // On start the shield bubble is inactive
         shieldBubble.SetActive(false);
@@ -80,45 +81,49 @@ public class AB : MonoBehaviour
         }
 
         // Power Jump timer
-        if (jumpBoost == true)
+        if (grav == true)
         {
-
-            controller.m_JumpForce = 1200f;
-            jumpBoostEffect.SetActive(true);
+            gravControlEffect.SetActive(true);
+            Water.isSwimming = false;
+            PlayerMovement.runSpeed = 40f;
 
             // Power Jump activated when player jumps
-            if (Input.GetButton("Jump"))
+            if (Input.GetButtonDown("Jump") && gravSwap == false)
             {
-                powerJumpEffect.SetActive(true);
+                rb.gravityScale = -3;
+                player.transform.localScale = new Vector2(player.transform.localScale.x, -20);
+                gravSwap = true;
                 
-            } else
+            } else if (Input.GetButtonDown("Jump") && gravSwap == true)
             {
-                powerJumpEffect.SetActive(false);
+                rb.gravityScale = 3;
+                player.transform.localScale = new Vector2(player.transform.localScale.x, 20);
+                gravSwap = false;
             }
 
-            jumpTimer -= Time.deltaTime;
+            gravTimer -= Time.deltaTime;
 
-            if (jumpTimer < 0)
+            if (gravTimer < 0)
             {
-                controller.m_JumpForce = 700f;
-                Abilities.powerJump = false;
-                jumpBoost = false;
-                jumpBoostEffect.SetActive(false);
-                powerJumpEffect.SetActive(false);
+                rb.gravityScale = 3;
+                player.transform.localScale = new Vector2(player.transform.localScale.x, 20);
+                gravSwap = false;
+                Abilities.gravControl = false;
+                grav = false;
+                gravControlEffect.SetActive(false);
 
-                jumpTimer = 10;
+                gravTimer = 10;
             }
         } else
         {
-            jumpTimer = 10;
+            gravTimer = 10;
         }
 
-        if (jumpBoost == false)
+        if (grav == false)
         {
             controller.m_JumpForce = 700f;
-            jumpBoost = false;
-            jumpBoostEffect.SetActive(false);
-            powerJumpEffect.SetActive(false);
+            grav = false;
+            gravControlEffect.SetActive(false);
         }
 
         // Shield bubble
@@ -171,7 +176,7 @@ public class AB : MonoBehaviour
     public void Ab_JumpBoost()
     {
 
-        jumpBoost = true;
+        grav = true;
 
     }
 

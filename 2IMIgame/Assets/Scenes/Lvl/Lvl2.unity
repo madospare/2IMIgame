@@ -5230,6 +5230,10 @@ PrefabInstance:
       value: GameMaster
       objectReference: {fileID: 0}
     - target: {fileID: 7479180586163071306, guid: 3fc0b70c82a0dc74fac2adff8acfbff3, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 696315289}
+    - target: {fileID: 7479180586163071306, guid: 3fc0b70c82a0dc74fac2adff8acfbff3, type: 3}
       propertyPath: DeathScreen
       value: 
       objectReference: {fileID: 932922549}

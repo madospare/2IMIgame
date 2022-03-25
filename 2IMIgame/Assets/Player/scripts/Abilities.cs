@@ -9,7 +9,7 @@ public class Abilities : MonoBehaviour
 
     // All abilities set standarly to false
     public static bool magnet = false;
-    public static bool powerJump = false;
+    public static bool gravControl = false;
     public static bool shield = false;
     public static bool pushSpell = false;
     public static bool blindness = false;
@@ -46,14 +46,14 @@ public class Abilities : MonoBehaviour
             player.GetComponent<AB>().Ab_AttractCoins();
             FindObjectOfType<AudioManager>().Play("ActivatePower");
 
-            powerJump = false;
+            gravControl = false;
             shield = false;
             pushSpell = false;
             blindness = false;
             heal = false;
         }
 
-        if (powerJump == true)
+        if (gravControl == true)
         {
             player.GetComponent<AB>().Ab_JumpBoost();
             FindObjectOfType<AudioManager>().Play("ActivatePower");
@@ -71,7 +71,7 @@ public class Abilities : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("ActivatePower");
 
             magnet = false;
-            powerJump = false;
+            gravControl = false;
             pushSpell = false;
             blindness = false;
             heal = false;
@@ -83,7 +83,7 @@ public class Abilities : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("ActivatePower");
 
             magnet = false;
-            powerJump = false;
+            gravControl = false;
             shield = false;
             blindness = false;
             heal = false;
@@ -93,7 +93,7 @@ public class Abilities : MonoBehaviour
         {
 
             magnet = false;
-            powerJump = false;
+            gravControl = false;
             shield = false;
             pushSpell = false;
             heal = false;
@@ -103,7 +103,7 @@ public class Abilities : MonoBehaviour
         {
 
             magnet = false;
-            powerJump = false;
+            gravControl = false;
             shield = false;
             pushSpell = false;
             blindness = false;
