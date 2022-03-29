@@ -11,7 +11,7 @@ public class PlayerCoins : MonoBehaviour
     void Start()
     {
 
-        // Players will start with 0 coins
+        // Player will start with 0 coins
         coins = 0;
 
     }

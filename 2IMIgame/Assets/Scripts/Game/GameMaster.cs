@@ -60,6 +60,7 @@ public class GameMaster : MonoBehaviour
         Abilities.heal = false;
 
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
 
     }
 
@@ -79,8 +80,9 @@ public class GameMaster : MonoBehaviour
         rb.gravityScale = 3;
         PlayerMovement.runSpeed = 40f;
 
-        FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
 
     }
 

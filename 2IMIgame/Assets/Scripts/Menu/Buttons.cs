@@ -18,6 +18,7 @@ public class Buttons : MonoBehaviour
     {
         Application.Quit();
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
     }
 
     public void Options()
@@ -30,13 +31,13 @@ public class Buttons : MonoBehaviour
 
     public void BugReport()
     {
-        Application.OpenURL("http://172.23.176.29/HTML/support.html");
+        Application.OpenURL("http://172.23.111.67/HTML/support.html");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     public void ViewUpdates()
     {
-        Application.OpenURL("http://172.23.176.29/index.html");
+        Application.OpenURL("http://172.23.111.67/index.html");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
@@ -55,12 +56,14 @@ public class Buttons : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("MainMenuTheme");
         FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
     }
 
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Menu");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
     }
 
     public void ExitToMenu()
@@ -68,7 +71,16 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Menu");
         FindObjectOfType<AudioManager>().Play("MainMenuTheme");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
 
+    }
+
+    // Tutorial
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+        FindObjectOfType<AudioManager>().Stop("MainMenuTheme");
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     // For the stages menu

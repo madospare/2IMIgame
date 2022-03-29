@@ -10,6 +10,8 @@ public class Coin : MonoBehaviour
 
     public static bool withinRadius = false;
 
+    public int oneUp = 100;
+
     void Start()
     {
 
@@ -25,6 +27,24 @@ public class Coin : MonoBehaviour
         {
             Vector2 dir = player.transform.position - transform.position;
             transform.Translate(dir.normalized * magnetSpeed * Time.deltaTime, Space.World);
+        }
+
+        // Coins max number is 999
+        if (PlayerCoins.coins > 999)
+        {
+            PlayerCoins.coins = 999;
+        }
+
+    }
+
+    void FixedUpdate()
+    {
+
+        // If player gets 100 coins, they get an extra life
+        if (PlayerCoins.coins >= oneUp)
+        {
+            PlayerHealth.health += 1;
+            oneUp += 100;
         }
 
     }

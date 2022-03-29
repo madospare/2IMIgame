@@ -91,13 +91,15 @@ public class AB : MonoBehaviour
             if (Input.GetButtonDown("Jump") && gravSwap == false)
             {
                 rb.gravityScale = -3;
-                player.transform.localScale = new Vector2(player.transform.localScale.x, -20);
+                player.transform.localScale = new Vector2(transform.localScale.x, -20);
+                FindObjectOfType<AudioManager>().Play("GravitySwap");
                 gravSwap = true;
                 
             } else if (Input.GetButtonDown("Jump") && gravSwap == true)
             {
                 rb.gravityScale = 3;
-                player.transform.localScale = new Vector2(player.transform.localScale.x, 20);
+                player.transform.localScale = new Vector2(transform.localScale.x, 20);
+                FindObjectOfType<AudioManager>().Play("GravitySwap");
                 gravSwap = false;
             }
 
@@ -121,7 +123,6 @@ public class AB : MonoBehaviour
 
         if (grav == false)
         {
-            controller.m_JumpForce = 700f;
             grav = false;
             gravControlEffect.SetActive(false);
         }

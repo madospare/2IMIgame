@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -125,6 +126,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Swim
     clip: {fileID: 8300000, guid: 1272cc5d191fb2b4baa079bf3e63a030, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GravitySwap
+    clip: {fileID: 8300000, guid: ee8acb3f9a1e3cd42ba301c595bb3adb, type: 3}
     volume: 0.78
     pitch: 1
     loop: 0
