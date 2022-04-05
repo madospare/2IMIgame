@@ -12,6 +12,8 @@ public class GameMaster : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public static bool lvl1;
+
     void Start()
     {
 

@@ -12,6 +12,11 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Gamemode");
         FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+
+        GameObject gm = GameObject.Find("GameMaster");
+        LevelUnlock lockstate = gm.GetComponent<LevelUnlock>();
+
+        lockstate.LoadGame();
     }
 
     public void ExitGame()
@@ -87,20 +92,6 @@ public class Buttons : MonoBehaviour
     public void StartLv1()
     {
         SceneManager.LoadScene("Lvl1");
-        FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
-        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
-    }
-
-    public void StartLv2()
-    {
-        SceneManager.LoadScene("Lvl2");
-        FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
-        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
-    }
-
-    public void StartLv3()
-    {
-        SceneManager.LoadScene("Lvl3");
         FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }

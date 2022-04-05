@@ -146,3 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0650431006625f4a8f88df9cb581321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishScreen: {fileID: 0}
+  coinBonus: {fileID: 0}
+  lifeBonus: {fileID: 0}
+  totalScore: {fileID: 0}
+  coinScore: 0
+  lifeScore: 0
