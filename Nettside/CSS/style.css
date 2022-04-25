@@ -13,6 +13,11 @@ body {
     width: 100%;
 }
 
+.gameIcon {
+    width: auto;
+    height: 50px;
+}
+
 h1 {
     color: white;
     font-family: Consolas;
@@ -56,6 +61,12 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    color: white;
+    font-family: Consolas;
+    margin-left: 20px;
+}
+
 p {
     color: white;
     font-family: Consolas;
@@ -72,4 +83,58 @@ p {
 
 .tab {
     margin-left: 40px;
+}
+
+.highlight {
+    color: #00FFFF;
+}
+
+.factoryLV {
+    color: rgb(85, 85, 85);
+}
+
+.dungeonLV {
+    color: purple;
+}
+
+.satelliteLV {
+    color: rgb(229, 228, 228);
+}
+
+.golden {
+    color: yellow;
+}
+
+.danger {
+    color: red;
+}
+
+.img {
+    width: auto;
+    height: 200px;
+    margin-left: 40px;    
+}
+
+.imgIcon {
+    width: auto;
+    height: 75px;
+    margin-left: 40px;
+}
+
+.imgIconvar1 {
+    width: auto;
+    height: 50px;
+    margin-left: 40px;
+}
+
+.imgIconvar2 {
+    width: auto;
+    height: 110px;
+    margin-left: 40px;    
+}
+
+.imgIconvar3 {
+    width: auto;
+    height: 35px;
+    margin-left: 40px;    
 }

@@ -21,7 +21,7 @@ if (isset($_POST["email"]) && isset($_POST["username"]) && isset($_POST["passwor
         $errors[] = "Email can't have spaces";
     } else 
     {
-        if (!validate_email_adress($email)) 
+        if (!validate_email_address($email)) 
         {
             $errors[] = "Invalid email";
         } else 
@@ -133,7 +133,7 @@ if (isset($_POST["email"]) && isset($_POST["username"]) && isset($_POST["passwor
             $stmt->bind_param('sss', $username, $email, $hashedPassword);
 
             /* execute querry */
-            if ($stmt_>execute()) 
+            if ($stmt->execute()) 
             {
                 
                 /* close statement */
