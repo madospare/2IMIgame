@@ -24,7 +24,7 @@ public class SC_LoginSystem : MonoBehaviour
     string userName = "";
     string userEmail = "";
 
-    string rootURL = "http://172.20.12.148";     // Path were files are located
+    string rootURL = "http://10.2.2.255";     // Path were files are located
 
     void OnGUI()
     {

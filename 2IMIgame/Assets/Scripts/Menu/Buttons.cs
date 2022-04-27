@@ -36,13 +36,13 @@ public class Buttons : MonoBehaviour
 
     public void BugReport()
     {
-        Application.OpenURL("http://172.23.111.67/HTML/support.html");
+        Application.OpenURL("http://10.2.2.255/HTML/support.html");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     public void ViewUpdates()
     {
-        Application.OpenURL("http://172.23.111.67/index.html");
+        Application.OpenURL("http://10.2.2.255/index.html");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
