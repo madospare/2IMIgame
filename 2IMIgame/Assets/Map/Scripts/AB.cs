@@ -63,7 +63,6 @@ public class AB : MonoBehaviour
                 magnetRadius.SetActive(false);
                 magnetON = false;
                 FindObjectOfType<AudioManager>().Stop("Magnet");
-                Coin.withinRadius = false;
                 Abilities.magnet = false;
 
                 magnetTimer = 10;
@@ -77,17 +76,16 @@ public class AB : MonoBehaviour
         {
             magnetRadius.SetActive(false);
             magnetON = false;
-            Coin.withinRadius = false;
         }
 
-        // Power Jump timer
+        // Gravity Swap timer
         if (grav == true)
         {
             gravControlEffect.SetActive(true);
             Water.isSwimming = false;
             PlayerMovement.runSpeed = 40f;
 
-            // Power Jump activated when player jumps
+            // Gravity Swap activated when player jumps
             if (Input.GetButtonDown("Jump") && gravSwap == false)
             {
                 rb.gravityScale = -3;

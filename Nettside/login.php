@@ -1,66 +1,36 @@
 <?php
+    include_once 'header.php';
+?>
 
-if (isset($_POST["email"]) && isset($_POST["password"]))
-{
-    $errors = array();
-    
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    
-    //Connect to database
-    require dirname(__FILE__) . '/database.php';
-    
-    if ($stmt = $mysqli_conection->prepare("SELECT username, email, password FROM sc_users WHERE email = ? LIMIT 1")) 
-    {
-        
-        /* bind parameters for markers */
-        $stmt->bind_param('s', $email);
-            
-        /* execute query */
-        if ($stmt->execute()){
-            
-            /* store result */
-            $stmt->store_result();
+<h3>Log In</h3>
 
-            if ($stmt->num_rows > 0){
-                /* bind result variables */
-                $stmt->bind_result($username_tmp, $email_tmp, $password_hash);
+<form action="includes/login-inc.php" method="post" class="userUI">
 
-                /* fetch value */
-                $stmt->fetch();
-                
-                if (password_verify ($password, $password_hash)){
-                    echo "Success" . "|" . $username_tmp . "|" .  $email_tmp;
-                    
-                    return;
-                } else
-                {
-                    $errors[] = "Wrong email or password.";
-                }
-            } else
-            {
-                $errors[] = "Wrong email or password.";
-            }
-            
-            /* close statement */
-            $stmt->close();
-            
-        } else
-        {
-            $errors[] = "Something went wrong, please try again.";
-        }
-    } else
-    {
-        $errors[] = "Something went wrong, please try again.";
+    <input type="text" name="uid" placeholder="Username/Email...">
+    <br>
+    <br>
+    <input type="password" name="pwd" placeholder="Password...">
+    <br>
+    <br>
+    <button type="submit" name="submit">Log In</button>
+
+<?php
+
+if (isset($_GET["error"])) {
+    if ($_GET["error"] == "emptyinput") {
+        echo "<p>Error: Fill in all fields before signing up!</p>";
+    } else if ($_GET["error"] == "wronglogin") {
+        echo "<p>Error: Incorrect username or password!</p>";        
     }
-    
-    if (count($errors) > 0)
-    {
-        echo $errors[0];
-    }
-} else
-{
-    echo "Missing data";
 }
 
+?>
+
+</form>
+
+<h4>What will account information be used for?</h4>
+<p>Account information will be stored. Email will be used for sending updates, usernames will be visible for other players in game. Account name won't be used for anything.</p>
+
+<?php
+    include_once 'footer.php';
 ?>

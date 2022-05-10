@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class BigCoin : MonoBehaviour
 {
-
-    private List<GameObject> coin = new List<GameObject>();
 
     private GameObject player;
     public float magnetSpeed = 10f;
@@ -62,7 +60,7 @@ public class Coin : MonoBehaviour
             // If player touches a coin, it will be added to the player's score
             if (collision.tag == ("Player"))
             {
-                PlayerCoins.coins += 1;
+                PlayerCoins.coins += 10;
                 FindObjectOfType<AudioManager>().Play("Coin");
             }
         }

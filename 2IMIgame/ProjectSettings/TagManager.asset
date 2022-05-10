@@ -13,6 +13,7 @@ TagManager:
   - PushRadius
   - Audio
   - Water
+  - Key
   layers:
   - Default
   - TransparentFX

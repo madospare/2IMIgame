@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNACK Home</title>
-    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-    
-    <div class="navbar" id="top">
-        <img src="media/GameIcon.png" class="gameIcon">
-        <h1>CNACK</h1>
-        <ul>
-            <li><a>Home</a></li>
-            <li><a href="HTML/downloads.html">Downloads</a></li>
-            <li><a href="HTML/support.html">Support</a></li>
-        </ul>
-    </div>
+    <?php
+        include_once 'header.php';
+    ?>
 
-    <div class="textbox">
+<?php
+    if (isset($_SESSION["Username"])) {
+        echo "<p id='hello'>Hello there " . $_SESSION["Username"] . ".</p>";
+    }
+?>
 
         <h3>Welcome!</h3>
         <p>To the main page of CNACK, a 2D-platformer game project. The game is still in early development, and is thus unfinished. There will probably be many bugs and issues because of this, so keep this in mind if you decide to install the game.</p>
@@ -31,6 +17,9 @@
         <p><span>&#9632;</span> Finishing the game</p>
         <br>
         <p>For a list of previous updates, visit the github page (link in downloads).</p>
+
+        <h3>How to download</h3>
+        <p>You need a user to download the game. Create a user, log in, and you'll be able to enter the download page. Click the download link, or download the files from github.</p>
 
         <h3>How to play</h3>
 
@@ -120,7 +109,6 @@
 
         <h4>And that's all! Good luck.</h4>
 
-    </div>
-
-</body>
-</html>
+    <?php
+        include_once 'footer.php';
+    ?>
