@@ -50,23 +50,23 @@
         <img src="media/img/checkPointActive.png" class="imgIconvar2" alt="Activated Checkpoint">
 
         <p><b class="golden">Coins</b> can be collected in each level. If you gain a <b class="golden">100 coins</b>, you will gain <b class="danger">1 extra life</b>. In multiplayer mode, you can win by aquiring <b class="golden">more coins</b> than the other players.</p>
-        <img src="media/img/coin.png" class="imgIconvar1" alt="Coin">
+        <img src="media/img/Coin.png" class="imgIconvar1" alt="Coin">
 
         <h4>Abilities</h4>
         <p>There are a total of <b class="highlight">6 abilities</b>. These are the <b class="highlight">Magnet</b>, <b class="highlight">Shield</b>, <b class="highlight">Blindness</b>, <b class="highlight">Push Spell</b>, <b class="highlight">Gravity Swap</b> and <b class="highlight">Heal</b>. These abilities can be found in <b class="highlight">Ability Boxes</b> scattered around each level.</p>
-        <img src="media/img/abilityBox.png" class="imgIconvar1" alt="Ability Box">
+        <img src="media/img/AbilityBox.png" class="imgIconvar1" alt="Ability Box">
 
         <p>The <b class="highlight">Magnet</b> creates a field around you for <b class="highlight">10 seconds</b>, and any coins close to that field will be drawn towards you.</p>
-        <img src="media/img/magnet.png" class="imgIconvar1" alt="Magnet Icon">
+        <img src="media/img/Magnet.png" class="imgIconvar1" alt="Magnet Icon">
 
         <p>The <b class="highlight">Shield</b> creates a protective bubble around you, giving you an extra life. Shield also protects you from projectiles. The shield will be destroyed if you take damage from non-projectile attacks.</p>
-        <img src="media/img/shield.png" class="imgIconvar1" alt="Shield Icon">
+        <img src="media/img/Shield.png" class="imgIconvar1" alt="Shield Icon">
 
         <p>The <b class="highlight">Blindness</b> allows you to move around unnoticed. Turrets, mages, orbs and defenders won't attack you for <b class="highlight">10 seconds</b>. In multiplayer mode, you will temporarily blind other players.</p>
-        <img src="media/img/blindness.png" class="imgIconvar1" alt="Blindness Icon">
+        <img src="media/img/Blindness.png" class="imgIconvar1" alt="Blindness Icon">
 
         <p>The <b class="highlight">Push Spell</b> creates a field around you for a limited time, pushing anything away from you. This keeps you safe, and can be used to sabotage other players in multiplayer mode.</p>
-        <img src="media/img/pushSpell.png" class="imgIconvar1" alt="pushSpell Icon">
+        <img src="media/img/PushSpell.png" class="imgIconvar1" alt="pushSpell Icon">
 
         <p>The <b class="highlight">Gravity Swap</b> swaps the gravity around you (won't affect others) for <b class="highlight">10 seconds</b>. You can thus walk on the roof and freely change gravity whenever you like.</p>
         <img src="media/img/gravSwap.png" class="imgIconvar1" alt="Gravity Swap Icon">
