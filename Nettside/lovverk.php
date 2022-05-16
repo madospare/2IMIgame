@@ -24,6 +24,10 @@
 <p>g. delta i dialogmøte etter innkalling fra arbeidsgiver, jf. § 4-6 fjerde ledd,</p>
 <p>h. rette seg etter påbud fra Arbeidstilsynet.</p>
 
+<br>
+
+<h4>Denne nettsiden, samt dataspillet CNACK følger disse lovverkene, og dermed bryter ikke med den norske loven.</h4>
+
 <?php
    include_once 'footer.php';
 ?>
