@@ -26,7 +26,7 @@
 
 <br>
 
-<h4>Denne nettsiden, samt dataspillet CNACK følger disse lovverkene, og dermed bryter ikke med den norske loven.</h4>
+<h4>Denne nettsiden, samt dataspillet CNACK følger dette lovverket, og dermed bryter ikke med den norske loven.</h4>
 
 <?php
    include_once 'footer.php';
