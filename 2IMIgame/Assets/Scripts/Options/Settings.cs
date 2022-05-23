@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Settings : MonoBehaviour
 {
 
-    public CRTEffect retroFX;
+    public static bool retroFX = true;
 
     public Dropdown resDropdown;
 
@@ -86,12 +86,12 @@ public class Settings : MonoBehaviour
         
         if (styleIndex == 0)
         {
-            retroFX.enabled = true;
+            retroFX = true;
         }
 
         if (styleIndex == 1)
         {
-            retroFX.enabled = false;
+            retroFX = false;
         }
 
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");

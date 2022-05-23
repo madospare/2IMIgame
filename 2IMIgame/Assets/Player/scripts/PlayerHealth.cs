@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     public GameObject player;
     public GameObject deathEffect;
     private Text LivesText;
-    private CheckPoint checkPoint;
 
     public int shieldLife;
     public Sprite healthIcon;
@@ -58,7 +57,7 @@ public class PlayerHealth : MonoBehaviour
         {
             deathEffect.SetActive(true);
             Instantiate(deathEffect, player.transform.position, player.transform.rotation);
-            Destroy(player);
+            player.SetActive(false);
             LivesText.text = "x0";
         }
 

@@ -136,6 +136,36 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: BigCoin
+    clip: {fileID: 8300000, guid: 020dbfd0e66061f47b06a51acb4fc146, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Door
+    clip: {fileID: 8300000, guid: 50060bf793bada14998f973bec11c749, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LV1Theme
+    clip: {fileID: 8300000, guid: 37f086254ffa3b946ab4ebd7b18d5712, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Key
+    clip: {fileID: 8300000, guid: 35ba7413d16550c43af7a947339372df, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Splash
+    clip: {fileID: 8300000, guid: 1d86e8e16f6589143b974f60b55c2d85, type: 3}
+    volume: 0.2
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}
 --- !u!81 &-8726776536880237651
 AudioListener:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class PlayerPos : MonoBehaviour
 
     public GameObject player;
 
+    bool isJumping;
+
     void Start()
     {
 
@@ -22,7 +24,7 @@ public class PlayerPos : MonoBehaviour
     {
         
         // If player presses the A key, and the input is from local player, the player will teleport back to latest checkpoint
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.A) && isJumping != true)
         {
             player.transform.position = gm.lastCheckPointPos;
             FindObjectOfType<AudioManager>().Play("Checkpoint");
@@ -40,11 +42,18 @@ public class PlayerPos : MonoBehaviour
         }
 
         // The local player will return to latest checkpoint if hit by an enemy
-        if (collisionInfo.collider.tag == ("Enemy") && PlayerHealth.health != 1 && AB.shieldON != true)
+        if (collisionInfo.collider.tag == ("Enemy") && PlayerHealth.health != 1)
         {
             player.transform.position = gm.lastCheckPointPos;
         }
 
+        isJumping = false;
+
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        isJumping = true;
     }
 
 }

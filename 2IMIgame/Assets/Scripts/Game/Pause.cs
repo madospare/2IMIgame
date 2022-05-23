@@ -20,7 +20,7 @@ public class Pause : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && PlayerHealth.health > 0 && Goal.finishedLv != true)
         {
             if (!isPaused)
             {

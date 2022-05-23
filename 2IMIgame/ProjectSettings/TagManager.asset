@@ -14,6 +14,8 @@ TagManager:
   - Audio
   - Water
   - Key
+  - Door
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -65,4 +67,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 681988217
+    locked: 0
+  - name: Panel
+    uniqueID: 2553822247
     locked: 0

@@ -35,6 +35,8 @@ public class Goal : MonoBehaviour
         {
             finishScreen.SetActive(true);
 
+            finishedLv = true;
+
             Time.timeScale = 0;
 
             Cursor.visible = true;

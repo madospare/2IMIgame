@@ -1,0 +1,8 @@
+Virtual machine - Ubuntu Apache2 Server
+name: Server
+username: Gnome
+ip adress: 10.2.2.255
+netmask: 255.0.0.0
+gateway: 10.0.0.1
+
+SQL password: GnomeGnome123

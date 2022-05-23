@@ -61,7 +61,7 @@ public class BigCoin : MonoBehaviour
             if (collision.tag == ("Player"))
             {
                 PlayerCoins.coins += 10;
-                FindObjectOfType<AudioManager>().Play("Coin");
+                FindObjectOfType<AudioManager>().Play("BigCoin");
             }
         }
 

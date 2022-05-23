@@ -33,9 +33,9 @@ body {
     width: 100%;
 }
 
-.gameIcon {
+.logo {
     width: auto;
-    height: 50px;
+    height: 100px;
 }
 
 h1 {
@@ -95,7 +95,6 @@ p {
 
 #mailto {
     text-decoration: none;
-    color: white;
     font-family: Consolas;
     font-size: 15px;
     padding: 1px;

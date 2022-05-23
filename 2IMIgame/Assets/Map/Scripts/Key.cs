@@ -14,15 +14,15 @@ public class Key : MonoBehaviour
     void Start()
     {
 
-        key = GameObject.FindGameObjectWithTag("Key");
+        key = this.gameObject;
         hasKey = false;
 
     }
 
     void Update()
     {
-      
-        if (Door.doorOpen == true)
+
+        if (hasKey == false && key.transform.parent == player.transform)
         {
             Destroy(gameObject);
         }
@@ -35,7 +35,9 @@ public class Key : MonoBehaviour
         if (collision.tag == "Player")
         {
             key.transform.parent = player.transform;
+            key.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + 1.5f);
             hasKey = true;
+            FindObjectOfType<AudioManager>().Play("Key");
         }
 
     }

@@ -15,12 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public float distance;      // For climbing ladders
-    public LayerMask Ladder;
-    public bool isClimbing;
-    float verticalMove = 0f;
-    public float climbSpeed = 80f;
-
     private void Start()
     {
 
@@ -34,28 +28,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
      
-            // Player input
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        // Player input
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-            verticalMove = Input.GetAxisRaw("Vertical") * climbSpeed;
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                jump = true;
-            }
-
-            if (jump == true && Water.isSwimming != true)
-            {
-                animator.SetBool("IsJumping", true);
-            }
-
-            if (isClimbing == true)
-            {
-                animator.SetFloat("Climb", Mathf.Abs(verticalMove));
-                animator.SetBool("IsJumping", false);
-            }
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
         }
+
+        if (jump == true && Water.isSwimming != true)
+        {
+            animator.SetBool("IsJumping", true);
+        }
+
+    }
 
     public void OnLanding()
     {
@@ -67,36 +54,30 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-            // Move character
-            controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
-            jump = false;
+        // Move character
+        controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
+        jump = false;
 
-            // For climbing ladders
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, Ladder);
+    }
 
-            if (hitInfo.collider != null)
-            {
-                animator.SetBool("IsJumping", false);
-                if (Input.GetKeyDown(KeyCode.UpArrow))
-                {
-                    isClimbing = true;
-                }
-            } else
-            {
-                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
-                {
-                    isClimbing = false;
-                }
-            }
+    // For moving platforms
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.collider.tag == "MovingPlatform")
+        {
+            this.transform.parent = collision.transform;
+        }
 
-            if (isClimbing == true && hitInfo.collider != null)
-            {
-                rb.velocity = new Vector2(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
-                rb.gravityScale = 0;
-            } else
-            {
-                //rb.gravityScale = 3;
-            }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        
+        if (collision.collider.tag == "MovingPlatform")
+        {
+            this.transform.parent = null;
+        }
 
     }
 

@@ -52,25 +52,6 @@ public class GameMaster : MonoBehaviour
     public void Retry()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-        Abilities.magnet = false;
-        Abilities.gravControl = false;
-        Abilities.shield = false;
-        Abilities.pushSpell = false;
-        Abilities.blindness = false;
-        Abilities.heal = false;
-
-        FindObjectOfType<AudioManager>().Play("ButtonClick");
-        FindObjectOfType<AudioManager>().Stop("Magnet");
-
-    }
-
-    public void ExitToScene()
-    {
-
-        SceneManager.LoadScene("Stages");
-
         Abilities.magnet = false;
         Abilities.gravControl = false;
         Abilities.shield = false;
@@ -83,8 +64,32 @@ public class GameMaster : MonoBehaviour
         PlayerMovement.runSpeed = 40f;
 
         FindObjectOfType<AudioManager>().Play("ButtonClick");
-        FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Stop("Magnet");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
+    public void ExitToScene()
+    {
+
+        Abilities.magnet = false;
+        Abilities.gravControl = false;
+        Abilities.shield = false;
+        Abilities.pushSpell = false;
+        Abilities.blindness = false;
+        Abilities.heal = false;
+
+        Water.isSwimming = false;
+        rb.gravityScale = 3;
+        PlayerMovement.runSpeed = 40f;
+
+        FindObjectOfType<AudioManager>().Stop("LV1Theme");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
+        FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
+
+        SceneManager.LoadScene("Stages");
 
     }
 

@@ -5,22 +5,14 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
 
-    public static bool doorOpen = false;
-
-    void Start()
-    {
-
-        doorOpen = false;
-
-    }
-
     public void OnCollisionEnter2D(Collision2D collision)
     {
         
         if (collision.collider.tag == "Player" && Key.hasKey == true)
         {
+            FindObjectOfType<AudioManager>().Play("Door");
             Destroy(gameObject);
-            doorOpen = true;
+            Key.hasKey = false;
         }
 
     }

@@ -10,13 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNACK</title>
     <link rel="icon" type="image/x-icon" href="media/favicon.ico">
-    <link rel="stylesheet" href="CSS/style.css"?v=<?php echo time(); ?>">>
+    <link rel="stylesheet" href="CSS/style.css?v=1.x.x"?v=<?php echo time(); ?>">>
 </head>
 <body>
     
     <div class="navbar" id="top">
-        <img src="media/GameIcon.png" class="gameIcon">
-        <h1>CNACK</h1>
+        <img src="media/CNACKLogo.png" class="logo">
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="lovverk.php">Laws (Norwegian)</a></li>

@@ -59,9 +59,10 @@ public class Buttons : MonoBehaviour
         Abilities.heal = false;
 
         FindObjectOfType<AudioManager>().Stop("MainMenuTheme");
+        FindObjectOfType<AudioManager>().Stop("LV1Theme");
+        FindObjectOfType<AudioManager>().Stop("Magnet");
         FindObjectOfType<AudioManager>().Play("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
-        FindObjectOfType<AudioManager>().Stop("Magnet");
     }
 
     public void ReturnToMenu()
@@ -76,6 +77,7 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Menu");
         FindObjectOfType<AudioManager>().Play("MainMenuTheme");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
+        FindObjectOfType<AudioManager>().Stop("LV1Theme");
         FindObjectOfType<AudioManager>().Stop("Magnet");
 
     }
@@ -94,6 +96,7 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Lvl1");
         FindObjectOfType<AudioManager>().Stop("OtherMenusTheme");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
+        FindObjectOfType<AudioManager>().Play("LV1Theme");
     }
 
     public void ReturnToGamemode()
