@@ -1,5 +1,8 @@
 <?php
 
+// Login kode
+// Sjekker først om det er feil input, før bruker logges inn
+
 if (isset($_POST["submit"])) {
     $username = $_POST["uid"];
     $password = $_POST["pwd"];

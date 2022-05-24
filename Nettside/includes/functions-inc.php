@@ -1,5 +1,9 @@
 <?php
 
+// Funksjoner som aktiveres når brukeren ikke fyller inn alle felt,
+//skriver feil, skal logges inn eller ut og registreres
+
+
 function emptyInputSignup($name, $email, $username, $password, $confirmpw) {
     $result;
     if (empty($name) || empty($email) || empty($username) || empty($password) || empty($confirmpw)) {

@@ -26,7 +26,11 @@
 
 <br>
 
-<h4>Denne nettsiden, samt dataspillet CNACK følger dette lovverket, og dermed bryter ikke med den norske loven.</h4>
+<h4>Årsoppgaven bryter ikke:</h4>
+<p><span>&#9632;</span> Personopplysningsloven, for informasjon som lagres er ikke sensitiv, og er nødvendig for å gjennomføre arbeidsrettslige plikter,</p>
+<p><span>&#9632;</span> Offentlighetsloven, for alt av offentlige dokumenter er tilgjengelige på GitHub,</p>
+<p><span>&#9632;</span> Sikkerhetsloven, for risiko er analysert og vurdert, og det er et system for å oppbevare årsoppgavens sikkerhet,</p>
+<p><span>&#9632;</span> Arbeidsmiljøloven, for jeg er den eneste arbeideren og jeg skaper/er ikke i et dårlig arbeidsmiljø.</p>
 
 <?php
    include_once 'footer.php';

@@ -10,6 +10,7 @@
 
         <h3>Welcome!</h3>
         <p>To the main page of CNACK, a 2D-platformer game project. The game is still in early development, and is thus unfinished. There will probably be many bugs and issues because of this, so keep this in mind if you decide to install the game.</p>
+        <p>The game, as well as this website, are all part of a school project.</p>
 
         <h3>Upcoming improvements:</h3>
         <p><span>&#9632;</span> A system for saving player users and stats</p>

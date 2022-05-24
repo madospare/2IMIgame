@@ -2,6 +2,8 @@
     session_start();
 ?>
 
+<!-- Øvre del av alle HTML elementer i PHP-dokumentene -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
