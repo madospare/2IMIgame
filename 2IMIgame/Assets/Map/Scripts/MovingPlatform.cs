@@ -22,6 +22,7 @@ public class MovingPlatform : MonoBehaviour
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 
+        // Start position x and y are equal to platform's position
         startingX = transform.position.x;
         startingY = transform.position.y;
 
@@ -33,11 +34,13 @@ public class MovingPlatform : MonoBehaviour
 
         if (isVertical == true)
         {
+            // If vertical is enabled for platform, it will move vertically instead
             transform.Translate(Vector2.up * speed * Time.deltaTime * dir);
             if (transform.position.y < startingY || transform.position.y > startingY + range)
                 dir *= -1;
         } else
         {
+            // Platform horizontal movement back and forth
             transform.Translate(Vector2.right * speed * Time.deltaTime * dir);
             if (transform.position.x < startingX || transform.position.x > startingX + range)
                 dir *= -1;

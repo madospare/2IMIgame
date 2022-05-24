@@ -23,7 +23,7 @@ public class PlayerPos : MonoBehaviour
     void Update()
     {
         
-        // If player presses the A key, and the input is from local player, the player will teleport back to latest checkpoint
+        // If player presses the A key, and player is not jumping, the player will teleport back to latest checkpoint
         if(Input.GetKeyDown(KeyCode.A) && isJumping != true)
         {
             player.transform.position = gm.lastCheckPointPos;
@@ -51,6 +51,7 @@ public class PlayerPos : MonoBehaviour
 
     }
 
+    // Player is only jumping if not in contact with an object
     void OnCollisionExit2D(Collision2D collision)
     {
         isJumping = true;

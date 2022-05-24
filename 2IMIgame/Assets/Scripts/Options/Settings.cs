@@ -46,6 +46,7 @@ public class Settings : MonoBehaviour
 
     }
 
+    // Pick resolution
     public void SetResolution(int resIndex)
     {
 
@@ -56,6 +57,8 @@ public class Settings : MonoBehaviour
     }
 
     // Volume
+
+    // Toggle on or off volume
     public void SetVolume (bool audioOn)
     {
 
@@ -72,6 +75,8 @@ public class Settings : MonoBehaviour
     }
 
     // Graphics
+
+    // Decide graphic quality from low, medium or high
     public void SetQuality(int qualityIndex)
     {
 
@@ -81,6 +86,8 @@ public class Settings : MonoBehaviour
     }
 
     // Style
+
+    // Change between retro and clean style
     public void SetStyle(int styleIndex)
     {
         
@@ -99,6 +106,8 @@ public class Settings : MonoBehaviour
     }
 
     // FullScreen
+
+    // Toggle full screen on or off
     public void SetFullScreen(bool isFullScreen)
     {
 

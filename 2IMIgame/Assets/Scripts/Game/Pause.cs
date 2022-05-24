@@ -12,7 +12,7 @@ public class Pause : MonoBehaviour
     void Start()
     {
 
-        ResumeGame();
+        ResumeGame(); // Game does not start paused
 
     }
 
@@ -20,9 +20,10 @@ public class Pause : MonoBehaviour
     void Update()
     {
 
+        // If enter is pressed, and player is not dead or level is not cleared, then pause
         if (Input.GetKeyDown(KeyCode.Return) && PlayerHealth.health > 0 && Goal.finishedLv != true)
         {
-            if (!isPaused)
+            if (!isPaused) // Pause only if not already paused
             {
                 PauseGame();
                 isPaused = true;
@@ -35,6 +36,7 @@ public class Pause : MonoBehaviour
 
     }
 
+    // Function that enables the pause screen and pauses the game
     public void PauseGame()
     {
 
@@ -47,6 +49,7 @@ public class Pause : MonoBehaviour
 
     }
 
+    // Function that disables the pause screen and unpauses the game 
     public void ResumeGame()
     {
 

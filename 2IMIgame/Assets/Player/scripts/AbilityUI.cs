@@ -69,6 +69,7 @@ public class AbilityUI : MonoBehaviour
             }
         }
 
+        // Enables the correct ability icon
         if (Abilities.shield == true)
         {
             rend.sprite = shield;

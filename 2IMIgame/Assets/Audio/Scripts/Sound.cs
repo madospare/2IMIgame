@@ -5,6 +5,7 @@ using UnityEngine;
 public class Sound
 {
 
+    // Creates sound source, volume, pitch and looping through for the Unity UI Inspector
     public string name;
 
     public AudioClip clip;

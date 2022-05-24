@@ -26,6 +26,7 @@ public class GameMaster : MonoBehaviour
     void Update()
     {
 
+        // Enables the death screen when player has 0 lives
         if (PlayerHealth.health == 0)
         {
             DeathScreen.SetActive(true);
@@ -51,7 +52,8 @@ public class GameMaster : MonoBehaviour
     // Death Screen Buttons
     public void Retry()
     {
-
+        
+        // Disable all player effects when restarting
         Abilities.magnet = false;
         Abilities.gravControl = false;
         Abilities.shield = false;
@@ -73,6 +75,7 @@ public class GameMaster : MonoBehaviour
     public void ExitToScene()
     {
 
+        // Disable all player effects when exiting
         Abilities.magnet = false;
         Abilities.gravControl = false;
         Abilities.shield = false;

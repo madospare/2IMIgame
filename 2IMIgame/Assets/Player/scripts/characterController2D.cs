@@ -1,3 +1,5 @@
+// This Character Controller is taken from Brackeys 2D Movement GitHub page
+
 using UnityEngine;
 using UnityEngine.Events;
 

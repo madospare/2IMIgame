@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
         }
 
+        // Jumping animation only when player isn't swimming
         if (jump == true && Water.isSwimming != true)
         {
             animator.SetBool("IsJumping", true);
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    // Stop jump animation when player has landed
     public void OnLanding()
     {
 
@@ -64,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         
+        // Player will be a child of the platform when in contact with it
         if (collision.collider.tag == "MovingPlatform")
         {
             this.transform.parent = collision.transform;
@@ -74,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         
+        // Player won't be a child of the platform when not in contact with it
         if (collision.collider.tag == "MovingPlatform")
         {
             this.transform.parent = null;

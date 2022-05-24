@@ -15,13 +15,14 @@ public class Key : MonoBehaviour
     {
 
         key = this.gameObject;
-        hasKey = false;
+        hasKey = false; // Player starts without a key
 
     }
 
     void Update()
     {
 
+        // If player no longer has a key, the key will be destroyed
         if (hasKey == false && key.transform.parent == player.transform)
         {
             Destroy(gameObject);
@@ -32,6 +33,7 @@ public class Key : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         
+        // If player touches a key, the key will become a child of player, and hover above their head
         if (collision.tag == "Player")
         {
             key.transform.parent = player.transform;

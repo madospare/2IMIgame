@@ -22,6 +22,7 @@ public class LockUI : MonoBehaviour
     void Update()
     {
 
+        // Level 2 will be unlocked if level 1 is cleared
         if (GameMaster.lvl1 == true)
         {
             lock2.SetActive(false);
@@ -34,6 +35,7 @@ public class LockUI : MonoBehaviour
 
     }
 
+    // Play level 2
     public void StartLv2()
     {
         if (GameMaster.lvl1 == true)
@@ -44,6 +46,7 @@ public class LockUI : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
+    // Play level 3
     public void StartLv3()
     {
         if (GameMaster.lvl1 == true)

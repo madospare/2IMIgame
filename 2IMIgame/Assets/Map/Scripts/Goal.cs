@@ -31,12 +31,14 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        // If player reaches goal
         if (collision.CompareTag("Player"))
         {
-            finishScreen.SetActive(true);
+            finishScreen.SetActive(true); // Finish Screen will pop up
 
-            finishedLv = true;
+            finishedLv = true; // The level will be finished
 
+            // Pauses game, enables cursor, and deactivates all active effects on player
             Time.timeScale = 0;
 
             Cursor.visible = true;
@@ -51,19 +53,22 @@ public class Goal : MonoBehaviour
 
             FindObjectOfType<AudioManager>().Stop("Magnet");
 
+            // Sets how much score for coins and lives
             coinScore = PlayerCoins.coins * 100;
             lifeScore = PlayerHealth.health * 1000;
 
+            // Converts points to string and sets the total score
             coinBonus.text = coinScore.ToString();
             lifeBonus.text = lifeScore.ToString();
             totalScore.text = (coinScore + lifeScore).ToString();
 
+            // Next level is unlocked
             GameObject goal = GameObject.Find("Goal");
             LevelUnlock lockstate = goal.GetComponent<LevelUnlock>();
 
             lockstate.Unlock();
 
-            lockstate.SaveGame();
+            //lockstate.SaveGame();
 
         }
 

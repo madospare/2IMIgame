@@ -10,6 +10,7 @@ public class Camera : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         
+        // Activates a new camera when player enters a new room
         if (other.CompareTag("Player") && !other.isTrigger)
         {
             cam.SetActive(true);
@@ -20,6 +21,7 @@ public class Camera : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
 
+        // Diactivates old cameras when player exits old rooms
         if (other.CompareTag("Player") && !other.isTrigger)
         {
             cam.SetActive(false);

@@ -7,18 +7,22 @@ public class Options : MonoBehaviour
 {
 
     // For The options menu
+
+    // Settings menu
     public void Settings()
     {
         SceneManager.LoadScene("Settings");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
+    // Shows credits
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
         FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
+    // Returns to the main menu
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Menu");

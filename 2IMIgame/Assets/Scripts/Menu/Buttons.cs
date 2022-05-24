@@ -7,6 +7,8 @@ public class Buttons : MonoBehaviour
 {
 
     // For the main menu
+
+    // Function for the "Play Game" button
     public void PlayGame()
     {
         SceneManager.LoadScene("Gamemode");
@@ -19,6 +21,7 @@ public class Buttons : MonoBehaviour
         lockstate.LoadGame();
     }
 
+    // Function for exiting the game entirely
     public void ExitGame()
     {
         Application.Quit();
@@ -26,6 +29,7 @@ public class Buttons : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("Magnet");
     }
 
+    // Function for moving to the options menu
     public void Options()
     {
         SceneManager.LoadScene("Options");
@@ -34,12 +38,14 @@ public class Buttons : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
+    // Link to support site of the website
     public void BugReport()
     {
         Application.OpenURL("http://10.2.2.255/support.php");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
+    // Link to the main site of the website
     public void ViewUpdates()
     {
         Application.OpenURL("http://10.2.2.255/index.php");
@@ -47,10 +53,13 @@ public class Buttons : MonoBehaviour
     }
 
     // For the gamemode menu
+
+    // Singleplayer button
     public void Singleplayer()
     {
         SceneManager.LoadScene("Stages");
 
+        // Disables player effects for when returning to stage selection after a game
         Abilities.magnet = false;
         Abilities.gravControl = false;
         Abilities.shield = false;
@@ -65,6 +74,7 @@ public class Buttons : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("ButtonClick");
     }
 
+    // Button for returning to the main menu
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -72,6 +82,7 @@ public class Buttons : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("Magnet");
     }
 
+    // Button for returning to the main menu from the pause screen
     public void ExitToMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -90,7 +101,7 @@ public class Buttons : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
-    // For the stages menu
+    // For starting level 1
     public void StartLv1()
     {
         SceneManager.LoadScene("Lvl1");
@@ -99,6 +110,7 @@ public class Buttons : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("LV1Theme");
     }
 
+    // For returning to the gamemode menu
     public void ReturnToGamemode()
     {
         SceneManager.LoadScene("Gamemode");

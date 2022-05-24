@@ -24,12 +24,11 @@ public class LevelUnlock : MonoBehaviour
     public void Unlock()
     {
 
+        // If scene named "Lvlx" is cleared, then level x is cleared
         if (sceneName == "Lvl1")
         {
             lv1Cleared = true; 
             GameMaster.lvl1 = true;
-
-            Debug.Log(GameMaster.lvl1);
         }
 
         if (sceneName == "Lvl2")
@@ -44,6 +43,7 @@ public class LevelUnlock : MonoBehaviour
 
     }
 
+    // Ignore this
     public void SaveGame()
     {
         SaveSystem.SaveGame(this);

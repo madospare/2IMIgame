@@ -29,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         
+        // If player has no shield and player health is above max lives,
+        // health will turn equal to max number of lives
         if (health > numOfLives && Abilities.shield != true)
         {
             health = numOfLives;
@@ -47,12 +49,15 @@ public class PlayerHealth : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
 
+        // If player collides with enemy, and player has no shield,
+        // player loses a life
         if (collisionInfo.collider.tag == ("Enemy") && AB.shieldON != true)
         {
             health -= 1;
             FindObjectOfType<AudioManager>().Play("Hurt");
         } 
         
+        // If player has 0 lives, plauer dies and death effect plays
         if (health == 0)
         {
             deathEffect.SetActive(true);
@@ -75,6 +80,7 @@ public class PlayerHealth : MonoBehaviour
             shieldLife = 1;
         }
 
+        // If shield is destroyed, disable shield
         if (shieldLife == 0)
         {
             AB.shieldON = false;

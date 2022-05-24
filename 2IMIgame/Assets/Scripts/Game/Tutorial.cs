@@ -20,6 +20,7 @@ public class Tutorial : MonoBehaviour
     void Start()
     {
 
+        // Only the first tutorial text is active at the beginning
         tutorial1.SetActive(true);
         tutorial2.SetActive(false);
         tutorial3.SetActive(false);
@@ -34,7 +35,8 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+        // When player progresses through the tutorial, the other tutorial texts will appear
         if (player.transform.position.x > 13.39f)
         {
             tutorial1.SetActive(false);
