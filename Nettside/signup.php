@@ -4,6 +4,10 @@
 
 <h3>Sign Up</h3>
 
+<h4>When making your account you agree to:</h4>
+<p><span>&#9632;</span> Being older than 13 years.
+<p><span>&#9632;</span> Account information being stored. Email will be used for contacting user, usernames will be visible for other players in game. Account name won't be used for anything.</p>
+
 <form action="includes/signup-inc.php" method="post" class="userUI">
 
     <input type="text" name="name" placeholder="Full name...">
@@ -47,8 +51,9 @@ if (isset($_GET["error"])) {
 
 </form>
 
-<h4>What will account information be used for?</h4>
-<p>Account information will be stored. Email will be used for sending updates, usernames will be visible for other players in game. Account name won't be used for anything.</p>
+<h4>When making your account you agree to:</h4>
+<p><span>&#9632;</span> Being older than 13 years.
+<p><span>&#9632;</span> Account information being stored. Email will be used for contacting user, usernames will be visible for other players in game. Account name won't be used for anything.</p>
 
 <?php
     include_once 'footer.php';
