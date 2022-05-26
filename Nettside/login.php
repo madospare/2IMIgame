@@ -28,9 +28,6 @@ if (isset($_GET["error"])) {
 
 </form>
 
-<h4>What will account information be used for?</h4>
-<p>Account information will be stored. Email will be used for sending updates, usernames will be visible for other players in game. Account name won't be used for anything.</p>
-
 <?php
     include_once 'footer.php';
 ?>

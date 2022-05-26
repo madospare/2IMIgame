@@ -5,13 +5,13 @@
 <h3>Lovverk</h3>
 
 <h4>Personopplysningsloven</h4>
-<p>Etter personopplysningsloven § 48 kan forsettlige eller grovt uaktsomme overtredelser av de der angitte bestemmelsene straffes med bøter eller fengsel inntil ett år eller begge deler.</p>
+<p>Behandle epost for kontakt og sikkerhet, å logge inn skal være enkelt, brukernavn og passord skal være nødvendig for pålogging, brukernavn skal være brukerens identitet på nettsiden, det skal ikke samles sensitive personopplysninger, nettsiden må følge en universell utforming. Etter personopplysningsloven § 48 kan forsettlige eller grovt uaktsomme overtredelser av de der angitte bestemmelsene straffes med bøter eller fengsel inntil ett år eller begge deler. Etter personopplysningsloven § 48 kan forsettlige eller grovt uaktsomme overtredelser av de der angitte bestemmelsene straffes med bøter eller fengsel inntil ett år eller begge deler.</p>
 
 <h4>Offentlighetsloven</h4>
-<p>Den som forsettlig bryter bestemmelser om offentlighet i denne lov eller i medhold av denne lov straffes med bøter. Dersom lovbruddet er forøvet av en offentlig ansatt tjenestemann, vil man også kunne idømmes tap av stilling eller tjeneste.</p>
+<p>Alle kan kreve innsyn i saksdokumenter, journaler og andre liknende registre. Den som forsettlig bryter bestemmelser om offentlighet i denne lov eller i medhold av denne lov straffes med bøter. Dersom lovbruddet er forøvet av en offentlig ansatt tjenestemann, vil man også kunne idømmes tap av stilling eller tjeneste.</p>
 
 <h4>Sikkerhetsloven</h4>
-<p>Med bot eller fengsel inntil 3 år straffes den som forsettlig eller grovt uaktsomt offentlig setter frem en diskriminerende eller hatefull ytring. Som ytring regnes også bruk av symboler. Den som i andres nærvær forsettlig eller grovt uaktsomt fremsetter en slik ytring overfor en som rammes av denne, jf. annet ledd, straffes med bot eller fengsel inntil 1 år.</p>
+<p>Virksomheten skal regelmessig gjennomføre vurdering av risiko. Vurderingen skal danne grunnlag for iverksetting av forebyggende sikkerhetstiltak. Med bot eller fengsel inntil 3 år straffes den som forsettlig eller grovt uaktsomt offentlig setter frem en diskriminerende eller hatefull ytring. Som ytring regnes også bruk av symboler. Den som i andres nærvær forsettlig eller grovt uaktsomt fremsetter en slik ytring overfor en som rammes av denne, jf. annet ledd, straffes med bot eller fengsel inntil 1 år.</p>
 
 <h4>Arbiedsmiljøloven</h4>
 <p>Arbeidstaker skal:</p>
