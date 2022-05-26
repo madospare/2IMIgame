@@ -4,8 +4,8 @@
 
 <h3>Sign Up</h3>
 
-<h4>When making your account you agree to:</h4>
-<p><span>&#9632;</span> Being older than 13 years.
+<h4>When making your account, you agree to:</h4>
+<p><span>&#9632;</span> Being older than 13 years.</p>
 <p><span>&#9632;</span> Account information being stored. Email will be used for contacting user, usernames will be visible for other players in game. Account name won't be used for anything.</p>
 
 <form action="includes/signup-inc.php" method="post" class="userUI">
