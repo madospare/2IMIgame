@@ -4,5 +4,5 @@ username: Gnome
 ip adress: 10.2.2.255
 netmask: 255.0.0.0
 gateway: 10.0.0.1
-
+Password: gnome123
 SQL password: GnomeGnome123
