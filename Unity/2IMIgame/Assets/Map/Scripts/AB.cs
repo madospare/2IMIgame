@@ -54,7 +54,7 @@ public class AB : MonoBehaviour
     {
         
         // Magnet timer
-        if (Abilities.magnet == true)
+        if (magnetON == true)
         {
             magnetTimer -= Time.deltaTime;
 
@@ -70,12 +70,6 @@ public class AB : MonoBehaviour
         } else
         {
             magnetTimer = 10;
-        }
-
-        if (Abilities.magnet == false)
-        {
-            magnetRadius.SetActive(false);
-            magnetON = false;
         }
 
         // Gravity Swap timer
@@ -171,7 +165,7 @@ public class AB : MonoBehaviour
 
     }
 
-    // Function activating the power jump
+    // Function activating the gravity swap
     public void Ab_JumpBoost()
     {
 

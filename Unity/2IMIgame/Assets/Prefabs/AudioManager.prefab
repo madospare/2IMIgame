@@ -166,6 +166,18 @@ MonoBehaviour:
     pitch: 2
     loop: 0
     source: {fileID: 0}
+  - name: VictoryTheme
+    clip: {fileID: 8300000, guid: 054e41f39eb2ba24f92cf6a2ff1d0e28, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Goal
+    clip: {fileID: 8300000, guid: 66578d20f22abb84ba9e225e6f8e47e6, type: 3}
+    volume: 0.78
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!81 &-8726776536880237651
 AudioListener:
   m_ObjectHideFlags: 0

@@ -39,12 +39,14 @@ public class PlayerPos : MonoBehaviour
         if (collisionInfo.collider.tag == ("CheckPoint"))
         {
             gm.lastCheckPointPos = transform.position;
+            PlayerMovement.jump = false;
         }
 
         // The local player will return to latest checkpoint if hit by an enemy
         if (collisionInfo.collider.tag == ("Enemy") && PlayerHealth.health != 1)
         {
             player.transform.position = gm.lastCheckPointPos;
+            PlayerMovement.jump = false;
         }
 
         isJumping = false;

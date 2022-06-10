@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public static float runSpeed = 40f;
 
     float horizontalMove = 0f;
-    bool jump = false;
+    public static bool jump = false;
 
     private Rigidbody2D rb;
 

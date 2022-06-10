@@ -34,7 +34,10 @@ public class Goal : MonoBehaviour
         // If player reaches goal
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Stop("LV1Theme");
+            FindObjectOfType<AudioManager>().Play("Goal");
             finishScreen.SetActive(true); // Finish Screen will pop up
+            FindObjectOfType<AudioManager>().Play("VictoryTheme");
 
             finishedLv = true; // The level will be finished
 
