@@ -7,12 +7,40 @@ public class ReceiveData : MonoBehaviour
 {
 
     public GameObject loginScreen;
+    public GameObject logoutBtn;
     public Text errorMessage;
+
+    public static bool isLoggedIn;
 
     void Start()
     {
 
         StartCoroutine(GetRequest("http://192.168.0.40/"));
+
+    }
+
+    void Update()
+    {
+
+        if (!isLoggedIn)
+        {
+            loginScreen.SetActive(true);
+            logoutBtn.SetActive(false);
+        }
+        else
+        {
+            loginScreen.SetActive(false);
+            logoutBtn.SetActive(true);
+        }
+
+    }
+
+    public void LogOut()
+    {
+
+        isLoggedIn = false;
+        loginScreen.SetActive(true);
+        logoutBtn.SetActive(false);
 
     }
 
@@ -62,13 +90,16 @@ public class ReceiveData : MonoBehaviour
             if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.LogError(www.error);
-            } else
+            }
+            else
             {
                 Debug.Log(www.downloadHandler.text);
                 if (www.downloadHandler.text.Contains("Connected successfully. User list: <br><br>Login Success!"))
                 {
                     loginScreen.SetActive(false);
-                } else
+                    isLoggedIn = true;
+                }
+                else
                 {
                     errorMessage.text = "Failed to login. Please try again.";
                 }
