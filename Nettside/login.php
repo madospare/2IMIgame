@@ -18,7 +18,7 @@
 
 if (isset($_GET["error"])) {
     if ($_GET["error"] == "emptyinput") {
-        echo "<p>Error: Fill in all fields before signing up!</p>";
+        echo "<p>Error: Fill in all fields before logging in!</p>";
     } else if ($_GET["error"] == "wronglogin") {
         echo "<p>Error: Incorrect username or password!</p>";        
     }

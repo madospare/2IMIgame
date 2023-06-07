@@ -2,7 +2,7 @@
 
 $serverName = "localhost";
 $dbUsername = "root";
-$dbPassword = "";
+$dbPassword = "gnome123";
 $dbName = "cnackDB";
 
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);

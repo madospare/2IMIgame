@@ -41,14 +41,21 @@ public class Buttons : MonoBehaviour
     // Link to support site of the website
     public void BugReport()
     {
-        Application.OpenURL("http://10.2.2.255/support.php");
+        Application.OpenURL("http://192.168.0.54/support.php");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
     // Link to the main site of the website
     public void ViewUpdates()
     {
-        Application.OpenURL("http://10.2.2.255/index.php");
+        Application.OpenURL("http://192.168.0.54/index.php");
+        FindObjectOfType<AudioManager>().Play("LevelSelectClick");
+    }
+
+    // Link to the sign up site of the website
+    public void SignUp()
+    {
+        Application.OpenURL("http://192.168.0.54/signup.php");
         FindObjectOfType<AudioManager>().Play("LevelSelectClick");
     }
 
